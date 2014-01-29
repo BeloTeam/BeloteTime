@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- String home activity -->
+    <string name="app_name">BeloteTime</string>
+	<string name="activity_home_button_jouer">JOUER</string>
+	<string name="activity_home_button_options">OPTIONS</string>
+	<string name="activity_home_button_apropos">A PROPOS</string>
+	<string name="activity_home_button_regles">REGLES</string>
+	<string name="activity_home_statistique_button_statistiques">STATISTIQUES</string>
+	<string name="perso_description">Image de personnage</string>
+    <string name="activity_statistiques_button_reset_description">Bouton de reset des statistiques</string>
+    <string name="activity_home_img_perso_description">Personnage ecran d\'acceuil</string>
+	<string name="activity_home_launcher_context_logo">logo</string>
+	<string name="activity_home_icon_button_jouer_description">Bouton pour lancer le jeu</string>
+	<string name="activity_home_icon_button_saisie_score">"&#x6b;"</string>
+	<string name="activity_home_icon_button_apropos">"&#x75;"</string>
+	<string name="activity_home_icon_button_rules">"&#x68;"</string>
+	<string name="activity_home_icon_button_statistiques">"&#xe0f0;"</string>
+	<string name="activity_home_icon_button_option">"&#xe037;"</string>
+	
+    <!-- String statistiques activity -->
+    <string name="activity_statistique_textH">h</string>
+    <string name="activity_statistique_textMin">min</string>
+    <string name="activity_statistique_nb_parties">Nombre total de parties jouées</string>
+    <string name="activity_statistique_pourcentage_parties_gagnees">Pourcentage de parties gagnées</string>
+    <string name="activity_statistique_temps">Temps total passé à jouer</string>
+    <string name="activity_statistique_nb_capots">Nombre total de capots</string>
+    <string name="activity_statistique_nb_dedans">Nombre total de dedans</string>
+    <string name="activity_statistique_nb_belote">Nombre total de belotes/rebelotes</string>
+	<string name="activity_statistique_icon_stat">&#xe0f0;</string>
+    <string name="activity_statistique_icon_reset">&#xe02a;</string>
+    
+    <string name="activity_statistique_icon_nb_belotes">&#xe033;&#xe033;&#xe033;&#xe033;&#xe031;</string>
+    <string name="activity_statistique_icon_nb_dedans">&#xe032;&#xe031;&#xe031;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_nb_capots">&#xe033;&#xe032;&#xe031;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_temps">&#xe033;&#xe033;&#xe031;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_pourcentage_parties_gagnees">&#xe033;&#xe033;&#xe033;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_nb_parties_jouees">&#xe033;&#xe033;&#xe032;&#xe031;&#xe031;</string>
+    
+    
+    <!-- String about activity -->
+    <string name="activity_about_icon_about">&#x74;</string>
+	
+    <!-- String options activity -->
+    <string-array name="activity_options_entries_typeCarte">
+		<item >Cartes classiques</item>
+		<item >Cartes modernes</item>
+	</string-array>
+	<string-array name="activity_options_entries_score">
+		<item >Manche</item>
+		<item >Partie</item>
+	</string-array>
+	<string-array name="activity_options_entry_values_typeCarte">
+		<item >0</item>
+		<item >1</item>
+	</string-array>
+	
+	<!-- String rules activity -->
+	<string name="activity_rules_list_regles">Règles</string>
+	<string name="activity_rules_list_ordre">Ordre</string>
+	<string-array name="activity_rules_entries">
+		<item ></item>
+		<item >Ordre</item>
+	</string-array>
+	
+	<string name="activity_rules_text_rules">
+	    <![CDATA[
+	    <body>
+	    <h4><b><font color="#1f8dd6">Présentation du jeu</font></b></h4><br>
+	    <h6><u>Avec quelles cartes joue-t-on à la belote ?</u></h6>
+	    Le jeu de belote se joue avec un jeu de 32 cartes. <br><br>
+	    <h6><u>Combien de joueurs y-a-t-il à la belote ?</u></h6>
+	    La belote est un jeu pour 4 joueurs répartis en 2 équipes de 2 joueurs. <br><br>
+	    <h6><u>Quelles sont les valeurs et l’ordre des cartes ?</u></h6>
+	    Vous trouverez les valeur et l\'ordre des cartes dans l\'onglet Ordre.
+	    <br><br><h4><b><font color="#1f8dd6">Déroulement du jeu</font></b></h4><br>
+	    <h6><u>La donne</u></h6>
+		A la donne, un joueur est désigné au hasard pour faire la première distribution. 
+		Ensuite pour la distribution de la manche suivante, c’est le joueur placé à gauche du premier donneur 
+		qui s’en chargera et ainsi de suite. <br>Au cours de la donne, 5 cartes sont distribuées à 
+		chaque joueur et 1 carte est placée au milieu de la table de jeu.<br><br>
+		<h6><u>Comment choisir l\'atout ?</u></h6> <br>
+		C’est la carte qui est placée au milieu de la table qui est proposée comme atout. 
+		Celui qui devra décider en premier de prendre à l\'atout ou pas, c’est le joueur placé à gauche 
+		du donneur et ainsi de suite pour le reste des joueurs. <br>Lorsqu’un joueur décide de prendre, il recevra 2 
+		cartes supplémentaires en plus de la carte du milieu tandis que les autres joueurs recevront chacun 3 cartes 
+		supplémentaires. <br>Dans le cas où au premier tour d\'enchère aucun joueur ne choisit de prendre, 
+		un nouveau tour d\'enchère au cours duquel chaque joueur pourra choisir sa couleur d\'atout commencera alors.
+		Les cartes seront ramassées et redistribuées si après 2 tours d\'enchères aucun des 4 joueurs n\'a pris. <br><br>
+	    <h6><u>Le jeu débute</u></h6>
+		Le joueur qui se trouve à gauche du donneur débute la manche. Chaque joueur suivra alors la couleur demandée
+		et si un joueur ne dispose pas de cartes de la couleur demandée, il pourra couper à l\'atout. <br>Toutefois, 
+		dans le cas où le partenaire est maître du pli alors que l’on ne possède pas de cartes de la couleur 
+		demandée, on peut ne pas couper à l\'atout. Cette opération est appelée une « défausse » ou une « pisse ». <br><br>
+		<h6><u>Belote</u></h6>
+		Si un même joueur tient en mains le Roi et la Dame à l\'atout, ce joueur pourra jouer ses cartes dans l\'ordre 
+		qu\'il désire. Il marquera alors 20 points, c\'est la « belote » « rebelote ». <br><br>
+		 <h6><u>Le « 10 de der »</u></h6>
+		L\'équipe qui remporte le dernier pli de la main remporte automatiquement un bonus de 10 points, 
+		on appel cela faire le 10 de der. <br><br>
+		<h6><u>Comment compter les points ?</u></h6>Le jeu de belote étant un jeu à contrat, 
+		l\'équipe qui prend devra totaliser en tout 82 points, 
+		y compris les éventuels points de la Belote, pour espérer remporter la manche. <br>La valeur des cartes amassée 
+		par chaque équipe est additionnée en fin de manche. <br><br>
+		Deux cas peuvent se présenter : <br><br>
+		- Si l\'équipe qui a pris réalise son contrat de 82 points, chaque équipe marquera les points 
+		qu\'elle a réalisés en plus des points de l’annonce et la Belote le cas échéant. <br><br>
+		- Si l\'équipe qui a pris n’a pas pu réaliser son contrat, elle ne marquera pas de points ou ne marquera
+		 que la Belote si belote il y a eu. L’équipe adverse encaissera alors 152 points plus les bonus « Belote » 
+		 et/ou « Dix de der » . <br><br>
+		Cependant, veillez à prendre en compte le cas suivant <br>
+		- Si l\'équipe qui a pris, réalise 86 points et que l\'équipe adverse réalise 76  points + 20 points de 
+		la « belote rebelote » soit 96 points, alors l\'équipe prenante est dedans.
+	    </body>
+	    ]]>
+	</string>
+	
+	<string name="activity_rules_text_atout">
+	    <![CDATA[
+	    <body>
+	        <b><font color="#1f8dd6">ATOUT</font></b><br><br>Valet (20pts)<br>9 (14pts)<br>As (11pts)<br>10 (10pts)<br>Roi (4pts)<br>Dame (3pts)<br>8 (0pts)<br>7 (0pts)
+	    </body>
+	    ]]>
+	</string>
+	
+	<string name="activity_rules_text_non_atout">
+	    <![CDATA[
+	    <body>
+	        <b><font color="#1f8dd6">NON ATOUT</font></b><br><br>As (11pts)<br>10 (10pts)<br>Roi (4pts)<br>Dame (3pts)<br>Valet (2pts)<br>9 (0pts)<br>8 (0pts<br>7 (0pts)
+	    </body>
+	     ]]>
+	</string>
+	
+	
+	
+	
+	
+	
+</resources>

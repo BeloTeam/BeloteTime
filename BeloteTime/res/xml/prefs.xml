@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="first_preferencescreen">
+
+    <PreferenceCategory android:title="Options de jeu" android:key="optionJeu">
+        <ListPreference 
+            android:title="Type de carte" 
+            android:key="typeCarte" 
+            android:defaultValue="0"
+            android:entryValues="@array/activity_options_entry_values_typeCarte" 
+            android:entries="@array/activity_options_entries_typeCarte"/>
+        
+        <ListPreference
+            android:title="Affichage du score"
+            android:key="affScore"
+            android:defaultValue="Manche"
+            android:entryValues="@array/activity_options_entries_score" 
+            android:entries="@array/activity_options_entries_score"/>
+        
+		<fr.belotime.view.utils.SeekBarPreference
+		 	android:title="Vitesse de jeu"
+	    	android:dialogMessage="Changer la vitesse de jeu"
+		    android:defaultValue="5"
+		    android:max="10"
+		  	android:key="seekBar"
+		   />
+        
+        <SwitchPreference 
+            android:title="Son" 
+            android:key="son"
+            android:defaultValue="false"/>
+        
+    </PreferenceCategory>
+    
+    
+    <PreferenceCategory android:title="Options d'équipe" android:key="optionEquipe">
+        
+        <EditTextPreference 
+            android:key="nomEquipe"
+            android:title="Nom de l'équipe"
+            android:defaultValue="equipe1"
+            />
+        <EditTextPreference 
+            android:key="nomJoueur"
+            android:title="Nom du joueur"
+            android:defaultValue="joueur1"
+            />
+        <EditTextPreference 
+            android:key="nomCoequipier"
+            android:title="Nom du coequipier"
+            android:defaultValue="joueur2"
+            />
+        
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

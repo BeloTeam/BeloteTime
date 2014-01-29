@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".HomeActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dip" >
+
+        <ImageView
+            android:id="@+id/activity_home_img_perso_gauche"
+            android:layout_width="80dip"
+			android:layout_height="80dip"
+            android:layout_marginTop="70dip"
+            android:layout_marginLeft="20dip"
+            android:contentDescription="@string/activity_home_statistique_button_statistiques"
+            android:src="@drawable/perso2"/>
+
+        <ImageView
+            android:id="@+id/activity_home_img_logo"
+            android:layout_width="420dip"
+            android:layout_height="150dip"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="15dip"
+            android:contentDescription="@string/activity_home_launcher_context_logo"
+            android:src="@drawable/logo_home" />
+
+        <ImageView
+            android:id="@+id/activity_home_img_perso_droite"
+			android:layout_width="80dip"
+			android:layout_height="80dip"
+			android:layout_marginTop="20dip"
+			android:layout_marginRight="70dip"
+            android:contentDescription="@string/perso_description"
+            android:src="@drawable/perso3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_home_layout_button_jouer"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#1f8dd6"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/activity_home_icon_button_jouer"
+            android:layout_width="40dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dip"
+            android:contentDescription="@string/activity_home_icon_button_jouer_description"
+            android:src="@drawable/cards_white" />
+
+        <TextView
+            android:id="@+id/activity_home_text_button_jouer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:text="@string/activity_home_button_jouer"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="38sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        
+        
+    <LinearLayout
+	    android:id="@+id/activity_home_layout_button_option"
+	    android:layout_width="145dip"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:background="#ff5317"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            android:id="@+id/activity_home_icon_button_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="@string/activity_home_icon_button_option"
+             />
+
+        <TextView
+            android:id="@+id/activity_home_text_button_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:text="@string/activity_home_button_options"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/activity_home_layout_button_statistiques"
+	    android:layout_width="195dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="#ff9917"
+        android:text="@string/activity_home_statistique_button_statistiques" >
+
+        <TextView
+            android:id="@+id/activity_home_icon_button_statistiques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="@string/activity_home_icon_button_statistiques"
+             />
+
+        <TextView
+            android:id="@+id/activity_home_text_button_statistiques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:text="@string/activity_home_statistique_button_statistiques"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+        
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/activity_home_button_regles"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+			android:layout_marginTop="25dip"
+			android:alpha="0.6"
+            android:background="#797878"
+            android:text="@string/activity_home_button_regles"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/activity_home_button_saisie_score"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#1f8dd6"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:text="@string/activity_home_icon_button_saisie_score" />
+        
+       <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/activity_home_button_apropos"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dip"
+            android:alpha="0.6"
+            android:background="#797878"
+            android:text="@string/activity_home_button_apropos"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

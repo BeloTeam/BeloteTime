@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tapis2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/as_coeur"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="-270dp"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/as_coeur" />
+        <ImageView
+            android:id="@+id/neuf_carreau"
+            android:layout_width="50dp"
+            android:layout_marginBottom="-270dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/neuf_carreau" />
+        <ImageView
+            android:id="@+id/roi_coeur"
+            android:layout_width="50dp"
+            android:layout_marginBottom="-270dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/roi_coeur" />
+        <ImageView
+            android:id="@+id/dame_trefle"
+            android:layout_width="50dp"
+            android:layout_marginBottom="-270dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/dame_trefle" />
+        <ImageView
+            android:id="@+id/as_coeur2"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="-270dp"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/as_coeur" />
+        <ImageView
+            android:id="@+id/neuf_carreau2"
+            android:layout_width="50dp"
+            android:layout_marginBottom="-270dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/neuf_carreau" />
+        <ImageView
+            android:id="@+id/roi_coeur2"
+            android:layout_width="50dp"
+            android:layout_marginBottom="-270dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/roi_coeur" />
+        <ImageView
+            android:id="@+id/dame_trefle2"
+            android:layout_width="50dp"
+            android:layout_marginBottom="-270dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/dame_trefle" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp" >
+
+        <TextView
+            android:id="@+id/activity_rules_icon_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="@string/activity_home_icon_button_rules"
+            android:textColor="#1f8dd6"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/activity_rules_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_home_button_regles"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#1f8dd6"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/activity_rules_text_list_rules"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="0.5"
+                android:background="#1f8dd6"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/activity_rules_list_regles" />
+
+            <TextView
+                android:id="@+id/activity_rules_text_list_order"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_weight="0.5"
+                android:textSize="20sp"
+                android:background="@drawable/activity_rules_font_list_view"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/activity_rules_list_ordre" />
+
+        </LinearLayout>
+
+
+        <ViewSwitcher
+            android:id="@+id/activity_rules_viewSwitcher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp" >
+            
+				<ScrollView
+				                android:id="@+id/scrollView1"
+				                android:layout_width="match_parent"
+				                android:layout_height="match_parent"
+				                android:layout_marginBottom="20dp"
+				                >
+				            <TextView
+				                android:id="@+id/activity_rules_text_rules"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_marginRight="20dp" 
+				                android:layout_marginLeft="20dp"
+				                
+				                android:textAlignment="gravity"
+				                android:gravity="left"
+				                android:textSize="20sp"
+				                android:text="@string/activity_rules_text_rules"/>
+				</ScrollView>
+				
+				
+				<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/activity_rules_text_atout"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/activity_rules_font_atout"
+                    android:text="@string/activity_rules_text_atout" />
+
+                <TextView
+                    android:id="@+id/activity_rules_text_non_atout"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:layout_weight="0.5"
+                    android:text="@string/activity_rules_text_non_atout" />
+
+            </LinearLayout>
+
+        </ViewSwitcher>
+
+    </LinearLayout>
+
+</LinearLayout>
