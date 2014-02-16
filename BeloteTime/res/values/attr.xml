@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="FontTextView">
-        <attr name="customFont" format="string" />
+   <declare-styleable name="RobotoTextView">
+        <attr name="typeface"/>
     </declare-styleable>
+    
+    <attr name="typeface" format="enum">
+        <enum name="roboto_thin" value="0"/>
+        <enum name="elegant" value="1"/>
+    </attr>
 
 </resources>

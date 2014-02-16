@@ -15,22 +15,25 @@ public final class R {
         public static final int slide_out_left=0x7f040003;
     }
     public static final class array {
-        public static final int activity_options_entries_score=0x7f080001;
+        public static final int activity_options_entries_score=0x7f090001;
         /**  String options activity 
          */
-        public static final int activity_options_entries_typeCarte=0x7f080000;
-        public static final int activity_options_entry_values_typeCarte=0x7f080002;
-        public static final int activity_rules_entries=0x7f080003;
+        public static final int activity_options_entries_typeCarte=0x7f090000;
+        public static final int activity_options_entry_values_typeCarte=0x7f090002;
+        public static final int activity_rules_entries=0x7f090003;
     }
     public static final class attr {
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>roboto_thin</code></td><td>0</td><td></td></tr>
+<tr><td><code>elegant</code></td><td>1</td><td></td></tr>
+</table>
          */
-        public static final int customFont=0x7f010000;
+        public static final int typeface=0x7f010000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -39,8 +42,8 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f060000;
-        public static final int activity_vertical_margin=0x7f060001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int activity_rules_font_atout=0x7f020000;
@@ -52,128 +55,141 @@ containing a value of this type.
         public static final int dame_trefle=0x7f020006;
         public static final int fond_stat=0x7f020007;
         public static final int ic_launcher=0x7f020008;
-        public static final int launcher_logo=0x7f020009;
-        public static final int logo_home=0x7f02000a;
-        public static final int neuf_carreau=0x7f02000b;
-        public static final int perso1=0x7f02000c;
-        public static final int perso2=0x7f02000d;
-        public static final int perso3=0x7f02000e;
-        public static final int perso4=0x7f02000f;
-        public static final int reset=0x7f020010;
-        public static final int retour=0x7f020011;
-        public static final int roi_coeur=0x7f020012;
+        public static final int icon_github=0x7f020009;
+        public static final int launcher_logo=0x7f02000a;
+        public static final int logo_home=0x7f02000b;
+        public static final int neuf_carreau=0x7f02000c;
+        public static final int perso1=0x7f02000d;
+        public static final int perso2=0x7f02000e;
+        public static final int perso3=0x7f02000f;
+        public static final int perso4=0x7f020010;
+        public static final int roi_coeur=0x7f020011;
+        public static final int smartphone_portrait_nathan=0x7f020012;
         public static final int stat_belotes=0x7f020013;
         public static final int stat_dedans=0x7f020014;
         public static final int stat_gagnees=0x7f020015;
         public static final int stat_medal=0x7f020016;
         public static final int stat_parties_jouees=0x7f020017;
         public static final int stat_temps=0x7f020018;
-        public static final int tapis2=0x7f020019;
+        public static final int tapis3=0x7f020019;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0b002f;
-        public static final int activity_about_icon_about=0x7f0b0000;
-        public static final int activity_about_title=0x7f0b0001;
-        public static final int activity_home_button_apropos=0x7f0b000b;
-        public static final int activity_home_button_options=0x7f0b0009;
-        public static final int activity_home_button_regles=0x7f0b0012;
-        public static final int activity_home_button_saisie_score=0x7f0b0013;
-        public static final int activity_home_button_statistiques=0x7f0b000a;
-        public static final int activity_home_icon_button_apropos=0x7f0b0018;
-        public static final int activity_home_icon_button_jouer=0x7f0b0007;
-        public static final int activity_home_icon_button_option=0x7f0b000d;
-        public static final int activity_home_icon_button_rules =0x7f0b0016;
-        public static final int activity_home_icon_button_statistiques=0x7f0b0010;
-        public static final int activity_home_img_logo=0x7f0b0004;
-        public static final int activity_home_img_perso_droite=0x7f0b0005;
-        public static final int activity_home_img_perso_gauche=0x7f0b0003;
-        public static final int activity_home_layout_button_apropos=0x7f0b0017;
-        public static final int activity_home_layout_button_jouer=0x7f0b0006;
-        public static final int activity_home_layout_button_option=0x7f0b000c;
-        public static final int activity_home_layout_button_regles=0x7f0b0014;
-        public static final int activity_home_layout_button_statistiques=0x7f0b000f;
-        public static final int activity_home_text_button_apropos=0x7f0b0019;
-        public static final int activity_home_text_button_jouer=0x7f0b0008;
-        public static final int activity_home_text_button_option=0x7f0b000e;
-        public static final int activity_home_text_button_rules=0x7f0b0015;
-        public static final int activity_home_text_button_statistiques=0x7f0b0011;
-        public static final int activity_launcher_view_logo=0x7f0b001a;
-        public static final int activity_rules_icon_rules=0x7f0b0023;
-        public static final int activity_rules_layout_atout=0x7f0b002a;
-        public static final int activity_rules_text_atout=0x7f0b002b;
-        public static final int activity_rules_text_list_order=0x7f0b0026;
-        public static final int activity_rules_text_list_rules=0x7f0b0025;
-        public static final int activity_rules_text_non_atout=0x7f0b002c;
-        public static final int activity_rules_text_rules=0x7f0b0029;
-        public static final int activity_rules_title=0x7f0b0024;
-        public static final int activity_rules_viewSwitcher=0x7f0b0027;
-        public static final int activity_score_icon_score=0x7f0b002d;
-        public static final int activity_score_title=0x7f0b002e;
-        public static final int activity_statistique_button_reset=0x7f0b0032;
-        public static final int as_coeur=0x7f0b001b;
-        public static final int as_coeur2=0x7f0b001f;
-        public static final int dame_trefle=0x7f0b001e;
-        public static final int dame_trefle2=0x7f0b0022;
-        public static final int etoile_stat_nb_belotes=0x7f0b004d;
-        public static final int etoile_stat_nb_capots=0x7f0b0045;
-        public static final int etoile_stat_nb_dedans=0x7f0b0049;
-        public static final int etoile_stat_nb_parties_jouees=0x7f0b0036;
-        public static final int etoile_stat_pourcentage_parties_gagnees=0x7f0b003a;
-        public static final int etoile_stat_temps=0x7f0b0041;
-        public static final int icon_stat=0x7f0b0030;
-        public static final int icon_stat_nb_belotes=0x7f0b004a;
-        public static final int icon_stat_nb_capots=0x7f0b0042;
-        public static final int icon_stat_nb_dedans=0x7f0b0046;
-        public static final int icon_stat_nb_parties_jouees=0x7f0b0033;
-        public static final int icon_stat_pourcentage_parties_gagnees=0x7f0b0037;
-        public static final int icon_stat_temps=0x7f0b003b;
-        public static final int imageView1=0x7f0b004e;
-        public static final int imageView2=0x7f0b0051;
-        public static final int imageView3=0x7f0b0054;
-        public static final int imageView4=0x7f0b005a;
-        public static final int imageView5=0x7f0b005d;
-        public static final int imageView6=0x7f0b0060;
-        public static final int menu_add=0x7f0b0064;
-        public static final int menu_crop=0x7f0b0066;
-        public static final int menu_save=0x7f0b0065;
-        public static final int menu_search=0x7f0b0063;
-        public static final int neuf_carreau=0x7f0b001c;
-        public static final int neuf_carreau2=0x7f0b0020;
-        public static final int roi_coeur=0x7f0b001d;
-        public static final int roi_coeur2=0x7f0b0021;
-        public static final int scrollView1=0x7f0b0028;
-        public static final int stat_nb_belotes=0x7f0b004c;
-        public static final int stat_nb_capots=0x7f0b0044;
-        public static final int stat_nb_dedans=0x7f0b0048;
-        public static final int stat_nb_parties_jouees=0x7f0b0035;
-        public static final int stat_pourcentage_parties_gagnees=0x7f0b0039;
-        public static final int stat_temps_h=0x7f0b003e;
-        public static final int stat_temps_heure=0x7f0b003d;
-        public static final int stat_temps_min=0x7f0b0040;
-        public static final int stat_temps_minute=0x7f0b003f;
-        public static final int textView1=0x7f0b0059;
-        public static final int textView10=0x7f0b005e;
-        public static final int textView11=0x7f0b005f;
-        public static final int textView12=0x7f0b0061;
-        public static final int textView13=0x7f0b0062;
-        public static final int textView14=0x7f0b0057;
-        public static final int textView15=0x7f0b0058;
-        public static final int textView2=0x7f0b004f;
-        public static final int textView3=0x7f0b0050;
-        public static final int textView4=0x7f0b0052;
-        public static final int textView5=0x7f0b0053;
-        public static final int textView6=0x7f0b0055;
-        public static final int textView7=0x7f0b0056;
-        public static final int textView8=0x7f0b005b;
-        public static final int textView9=0x7f0b005c;
-        public static final int text_stat_nb_belotes=0x7f0b004b;
-        public static final int text_stat_nb_capots=0x7f0b0043;
-        public static final int text_stat_nb_dedans=0x7f0b0047;
-        public static final int text_stat_nb_parties_jouees=0x7f0b0034;
-        public static final int text_stat_pourcentage_parties_gagnees=0x7f0b0038;
-        public static final int text_stat_temps=0x7f0b003c;
-        public static final int title_stat=0x7f0b0031;
-        public static final int view1=0x7f0b0002;
+        public static final int LinearLayout1=0x7f060041;
+        public static final int activity_about_icon_about=0x7f060002;
+        public static final int activity_about_icon_contact_github=0x7f06000a;
+        public static final int activity_about_icon_contact_mail=0x7f060008;
+        public static final int activity_about_text_arthur=0x7f060010;
+        public static final int activity_about_text_contact=0x7f060007;
+        public static final int activity_about_text_contact_github=0x7f06000b;
+        public static final int activity_about_text_contact_mail=0x7f060009;
+        public static final int activity_about_text_david=0x7f06000e;
+        public static final int activity_about_text_developpeurs=0x7f06000c;
+        public static final int activity_about_text_informations=0x7f060005;
+        public static final int activity_about_text_informations_title=0x7f060004;
+        public static final int activity_about_text_loic=0x7f060012;
+        public static final int activity_about_text_nathan=0x7f060014;
+        public static final int activity_about_title=0x7f060003;
+        public static final int activity_home_button_apropos=0x7f06001d;
+        public static final int activity_home_button_options=0x7f06001b;
+        public static final int activity_home_button_regles=0x7f060024;
+        public static final int activity_home_button_saisie_score=0x7f060025;
+        public static final int activity_home_button_statistiques=0x7f06001c;
+        public static final int activity_home_icon_button_apropos=0x7f06002a;
+        public static final int activity_home_icon_button_jouer=0x7f060019;
+        public static final int activity_home_icon_button_option=0x7f06001f;
+        public static final int activity_home_icon_button_rules =0x7f060028;
+        public static final int activity_home_icon_button_statistiques=0x7f060022;
+        public static final int activity_home_img_logo=0x7f060016;
+        public static final int activity_home_img_perso_droite=0x7f060017;
+        public static final int activity_home_img_perso_gauche=0x7f060015;
+        public static final int activity_home_layout_button_apropos=0x7f060029;
+        public static final int activity_home_layout_button_jouer=0x7f060018;
+        public static final int activity_home_layout_button_option=0x7f06001e;
+        public static final int activity_home_layout_button_regles=0x7f060026;
+        public static final int activity_home_layout_button_statistiques=0x7f060021;
+        public static final int activity_home_text_button_apropos=0x7f06002b;
+        public static final int activity_home_text_button_jouer=0x7f06001a;
+        public static final int activity_home_text_button_option=0x7f060020;
+        public static final int activity_home_text_button_rules=0x7f060027;
+        public static final int activity_home_text_button_statistiques=0x7f060023;
+        public static final int activity_launcher_view_logo=0x7f06002c;
+        public static final int activity_rules_icon_rules=0x7f060035;
+        public static final int activity_rules_layout_atout=0x7f06003c;
+        public static final int activity_rules_text_atout=0x7f06003d;
+        public static final int activity_rules_text_list_order=0x7f060038;
+        public static final int activity_rules_text_list_rules=0x7f060037;
+        public static final int activity_rules_text_non_atout=0x7f06003e;
+        public static final int activity_rules_text_rules=0x7f06003b;
+        public static final int activity_rules_title=0x7f060036;
+        public static final int activity_rules_viewSwitcher=0x7f060039;
+        public static final int activity_score_icon_score=0x7f06003f;
+        public static final int activity_score_title=0x7f060040;
+        public static final int activity_statistique_button_reset=0x7f060044;
+        public static final int as_coeur=0x7f06002d;
+        public static final int as_coeur2=0x7f060031;
+        public static final int dame_trefle=0x7f060030;
+        public static final int dame_trefle2=0x7f060034;
+        public static final int elegant=0x7f060001;
+        public static final int etoile_stat_nb_belotes=0x7f06005f;
+        public static final int etoile_stat_nb_capots=0x7f060057;
+        public static final int etoile_stat_nb_dedans=0x7f06005b;
+        public static final int etoile_stat_nb_parties_jouees=0x7f060048;
+        public static final int etoile_stat_pourcentage_parties_gagnees=0x7f06004c;
+        public static final int etoile_stat_temps=0x7f060053;
+        public static final int icon_stat=0x7f060042;
+        public static final int icon_stat_nb_belotes=0x7f06005c;
+        public static final int icon_stat_nb_capots=0x7f060054;
+        public static final int icon_stat_nb_dedans=0x7f060058;
+        public static final int icon_stat_nb_parties_jouees=0x7f060045;
+        public static final int icon_stat_pourcentage_parties_gagnees=0x7f060049;
+        public static final int icon_stat_temps=0x7f06004d;
+        public static final int imageView1=0x7f06000d;
+        public static final int imageView2=0x7f06000f;
+        public static final int imageView3=0x7f060011;
+        public static final int imageView4=0x7f060013;
+        public static final int imageView5=0x7f06006a;
+        public static final int imageView6=0x7f06006d;
+        public static final int menu_add=0x7f060071;
+        public static final int menu_crop=0x7f060073;
+        public static final int menu_save=0x7f060072;
+        public static final int menu_search=0x7f060070;
+        public static final int neuf_carreau=0x7f06002e;
+        public static final int neuf_carreau2=0x7f060032;
+        public static final int roboto_thin=0x7f060000;
+        public static final int roi_coeur=0x7f06002f;
+        public static final int roi_coeur2=0x7f060033;
+        public static final int scrollView1=0x7f06003a;
+        public static final int stat_nb_belotes=0x7f06005e;
+        public static final int stat_nb_capots=0x7f060056;
+        public static final int stat_nb_dedans=0x7f06005a;
+        public static final int stat_nb_parties_jouees=0x7f060047;
+        public static final int stat_pourcentage_parties_gagnees=0x7f06004b;
+        public static final int stat_temps_h=0x7f060050;
+        public static final int stat_temps_heure=0x7f06004f;
+        public static final int stat_temps_min=0x7f060052;
+        public static final int stat_temps_minute=0x7f060051;
+        public static final int textView10=0x7f06006b;
+        public static final int textView11=0x7f06006c;
+        public static final int textView12=0x7f06006e;
+        public static final int textView13=0x7f06006f;
+        public static final int textView14=0x7f060066;
+        public static final int textView15=0x7f060067;
+        public static final int textView2=0x7f060060;
+        public static final int textView3=0x7f060061;
+        public static final int textView4=0x7f060062;
+        public static final int textView5=0x7f060063;
+        public static final int textView6=0x7f060064;
+        public static final int textView7=0x7f060065;
+        public static final int textView8=0x7f060068;
+        public static final int textView9=0x7f060069;
+        public static final int text_stat_nb_belotes=0x7f06005d;
+        public static final int text_stat_nb_capots=0x7f060055;
+        public static final int text_stat_nb_dedans=0x7f060059;
+        public static final int text_stat_nb_parties_jouees=0x7f060046;
+        public static final int text_stat_pourcentage_parties_gagnees=0x7f06004a;
+        public static final int text_stat_temps=0x7f06004e;
+        public static final int title_stat=0x7f060043;
+        public static final int view1=0x7f060006;
     }
     public static final class layout {
         public static final int layout_about=0x7f030000;
@@ -186,55 +202,67 @@ containing a value of this type.
         public static final int layout_statistique_tablette=0x7f030007;
     }
     public static final class menu {
-        public static final int menu_score=0x7f0a0000;
+        public static final int menu_score=0x7f0b0000;
     }
     public static final class string {
         /**  String about activity 
          */
-        public static final int activity_about_icon_about=0x7f070020;
-        public static final int activity_home_button_apropos=0x7f070003;
-        public static final int activity_home_button_jouer=0x7f070001;
-        public static final int activity_home_button_options=0x7f070002;
-        public static final int activity_home_button_regles=0x7f070004;
-        public static final int activity_home_icon_button_apropos=0x7f07000c;
-        public static final int activity_home_icon_button_jouer_description=0x7f07000a;
-        public static final int activity_home_icon_button_option=0x7f07000f;
-        public static final int activity_home_icon_button_rules=0x7f07000d;
-        public static final int activity_home_icon_button_saisie_score=0x7f07000b;
-        public static final int activity_home_icon_button_statistiques=0x7f07000e;
-        public static final int activity_home_img_perso_description=0x7f070008;
-        public static final int activity_home_launcher_context_logo=0x7f070009;
-        public static final int activity_home_statistique_button_statistiques=0x7f070005;
-        public static final int activity_rules_list_ordre=0x7f070022;
+        public static final int activity_about_icon_about=0x7f080020;
+        public static final int activity_about_icon_contact_mail=0x7f080024;
+        public static final int activity_about_img_portrait_description=0x7f08002c;
+        public static final int activity_about_text_arthur=0x7f080029;
+        public static final int activity_about_text_contact=0x7f080023;
+        public static final int activity_about_text_contact_github=0x7f080026;
+        public static final int activity_about_text_contact_mail=0x7f080025;
+        public static final int activity_about_text_david=0x7f080028;
+        public static final int activity_about_text_developpeurs=0x7f080027;
+        public static final int activity_about_text_informations=0x7f080021;
+        public static final int activity_about_text_informations_title=0x7f080022;
+        public static final int activity_about_text_loic=0x7f08002a;
+        public static final int activity_about_text_nathan=0x7f08002b;
+        public static final int activity_home_button_apropos=0x7f080003;
+        public static final int activity_home_button_jouer=0x7f080001;
+        public static final int activity_home_button_options=0x7f080002;
+        public static final int activity_home_button_regles=0x7f080004;
+        public static final int activity_home_icon_button_apropos=0x7f08000c;
+        public static final int activity_home_icon_button_jouer_description=0x7f08000a;
+        public static final int activity_home_icon_button_option=0x7f08000f;
+        public static final int activity_home_icon_button_rules=0x7f08000d;
+        public static final int activity_home_icon_button_saisie_score=0x7f08000b;
+        public static final int activity_home_icon_button_statistiques=0x7f08000e;
+        public static final int activity_home_img_perso_description=0x7f080008;
+        public static final int activity_home_launcher_context_logo=0x7f080009;
+        public static final int activity_home_statistique_button_statistiques=0x7f080005;
+        public static final int activity_rules_list_ordre=0x7f08002e;
         /**  String rules activity 
          */
-        public static final int activity_rules_list_regles=0x7f070021;
-        public static final int activity_rules_text_atout=0x7f070024;
-        public static final int activity_rules_text_non_atout=0x7f070025;
-        public static final int activity_rules_text_rules=0x7f070023;
-        public static final int activity_statistique_icon_nb_belotes=0x7f07001a;
-        public static final int activity_statistique_icon_nb_capots=0x7f07001c;
-        public static final int activity_statistique_icon_nb_dedans=0x7f07001b;
-        public static final int activity_statistique_icon_nb_parties_jouees=0x7f07001f;
-        public static final int activity_statistique_icon_pourcentage_parties_gagnees=0x7f07001e;
-        public static final int activity_statistique_icon_reset=0x7f070019;
-        public static final int activity_statistique_icon_stat=0x7f070018;
-        public static final int activity_statistique_icon_temps=0x7f07001d;
-        public static final int activity_statistique_nb_belote=0x7f070017;
-        public static final int activity_statistique_nb_capots=0x7f070015;
-        public static final int activity_statistique_nb_dedans=0x7f070016;
-        public static final int activity_statistique_nb_parties=0x7f070012;
-        public static final int activity_statistique_pourcentage_parties_gagnees=0x7f070013;
-        public static final int activity_statistique_temps=0x7f070014;
+        public static final int activity_rules_list_regles=0x7f08002d;
+        public static final int activity_rules_text_atout=0x7f080030;
+        public static final int activity_rules_text_non_atout=0x7f080031;
+        public static final int activity_rules_text_rules=0x7f08002f;
+        public static final int activity_statistique_icon_nb_belotes=0x7f08001a;
+        public static final int activity_statistique_icon_nb_capots=0x7f08001c;
+        public static final int activity_statistique_icon_nb_dedans=0x7f08001b;
+        public static final int activity_statistique_icon_nb_parties_jouees=0x7f08001f;
+        public static final int activity_statistique_icon_pourcentage_parties_gagnees=0x7f08001e;
+        public static final int activity_statistique_icon_reset=0x7f080019;
+        public static final int activity_statistique_icon_stat=0x7f080018;
+        public static final int activity_statistique_icon_temps=0x7f08001d;
+        public static final int activity_statistique_nb_belote=0x7f080017;
+        public static final int activity_statistique_nb_capots=0x7f080015;
+        public static final int activity_statistique_nb_dedans=0x7f080016;
+        public static final int activity_statistique_nb_parties=0x7f080012;
+        public static final int activity_statistique_pourcentage_parties_gagnees=0x7f080013;
+        public static final int activity_statistique_temps=0x7f080014;
         /**  String statistiques activity 
          */
-        public static final int activity_statistique_textH=0x7f070010;
-        public static final int activity_statistique_textMin=0x7f070011;
-        public static final int activity_statistiques_button_reset_description=0x7f070007;
+        public static final int activity_statistique_textH=0x7f080010;
+        public static final int activity_statistique_textMin=0x7f080011;
+        public static final int activity_statistiques_button_reset_description=0x7f080007;
         /**  String home activity 
          */
-        public static final int app_name=0x7f070000;
-        public static final int perso_description=0x7f070006;
+        public static final int app_name=0x7f080000;
+        public static final int perso_description=0x7f080006;
     }
     public static final class style {
         /** 
@@ -258,42 +286,45 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f090000;
+        public static final int AppBaseTheme=0x7f0a0000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f090001;
+        public static final int AppTheme=0x7f0a0001;
     }
     public static final class xml {
         public static final int prefs=0x7f050000;
     }
     public static final class styleable {
-        /** Attributes that can be used with a FontTextView.
+        /** Attributes that can be used with a RobotoTextView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FontTextView_customFont fr.belotime:customFont}</code></td><td></td></tr>
+           <tr><td><code>{@link #RobotoTextView_typeface fr.belotime:typeface}</code></td><td></td></tr>
            </table>
-           @see #FontTextView_customFont
+           @see #RobotoTextView_typeface
          */
-        public static final int[] FontTextView = {
+        public static final int[] RobotoTextView = {
             0x7f010000
         };
         /**
-          <p>This symbol is the offset where the {@link fr.belotime.R.attr#customFont}
-          attribute's value can be found in the {@link #FontTextView} array.
+          <p>This symbol is the offset where the {@link fr.belotime.R.attr#typeface}
+          attribute's value can be found in the {@link #RobotoTextView} array.
 
 
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name fr.belotime:customFont
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>roboto_thin</code></td><td>0</td><td></td></tr>
+<tr><td><code>elegant</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name fr.belotime:typeface
         */
-        public static final int FontTextView_customFont = 0;
+        public static final int RobotoTextView_typeface = 0;
     };
 }

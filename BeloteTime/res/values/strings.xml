@@ -40,6 +40,19 @@
     
     <!-- String about activity -->
     <string name="activity_about_icon_about">&#x74;</string>
+    <string name="activity_about_text_informations">Jeu de belote open source sous licence GPL réalisé dans le cadre de l\'UE Projet du Master 1 Informatique de l\'Université Paul Sabatier.\n\nCompatible à partir de : Android 4.0 ice cream sandwich</string>
+    <string name="activity_about_text_informations_title">INFORMATIONS</string>
+    <string name="activity_about_text_contact">CONTACT</string>
+    <string name="activity_about_icon_contact_mail">&#xe076;</string>
+    <string name="activity_about_text_contact_mail"><u>BeloTeam@gmail.com</u></string>
+    <string name="activity_about_text_contact_github"><u>https://github.com/BeloTeam/BeloteTime</u></string>
+    <string name="activity_about_text_developpeurs">DEVELOPPEURS</string>
+    <string name="activity_about_text_david">David Bernard</string>
+    <string name="activity_about_text_arthur">Arthur Frin</string>
+    <string name="activity_about_text_loic">Loïc Guzzetta</string>
+    <string name="activity_about_text_nathan">Nathan Prior</string>
+     <string name="activity_about_img_portrait_description">Portrait des developpeurs</string>
+    
 	
     <!-- String options activity -->
     <string-array name="activity_options_entries_typeCarte">

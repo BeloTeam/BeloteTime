@@ -188,7 +188,7 @@
                     android:textSize="80sp" />
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/activity_about_text_informations"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dip"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statistics>
+	<parties_jouees value="0"/>
+	<parties_gagnees_pourcent value="0"/>
+	<temps_heure value="0"/>
+	<temps_minute value="0"/>
+	<capots value="0"/>
+	<dedans value="0"/>
+	<belotes value="0"/>
+</statistics>

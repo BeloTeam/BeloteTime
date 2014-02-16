@@ -19,8 +19,10 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import fr.belotime.R;
 import fr.belotime.view.utils.MakeFont;
+import fr.belotime.view.utils.StatisticsXML;
 
 
 public class StatistiquesActivity extends Activity implements OnClickListener {
@@ -55,6 +57,8 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 		//SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //stat_nb_parties_jouees.setText(prefs.getString("nomEquipe", "equipe1"));
         findViewById(R.id.activity_statistique_button_reset).setOnClickListener(this);
+        
+        
 	}
 
 
