@@ -3,7 +3,7 @@ package fr.belotime.view.utils;
 import java.util.List;
 
 public class Statistics {
-	
+
 	private int parties_jouees;
 	private int parties_gagnees_pourcent;
 	private int temps_heure;
@@ -12,15 +12,15 @@ public class Statistics {
 	private int dedans;
 	private int belote;
 
-	public Statistics(int pj,int pgp,int th,int tm, int cap,int ded, int bel) {
+	public Statistics(int pj, int pgp, int th, int tm, int cap, int ded, int bel) {
 		// TODO Auto-generated constructor stub
 		parties_jouees = pj;
 		parties_gagnees_pourcent = pgp;
 		temps_heure = th;
 		temps_minute = tm;
-		capots=cap;
-		dedans=ded;
-		belote=bel;
+		capots = cap;
+		dedans = ded;
+		belote = bel;
 	}
 
 	public int getParties_jouees() {
@@ -78,9 +78,8 @@ public class Statistics {
 	public void setBelote(int belote) {
 		this.belote = belote;
 	}
-	
-	public List<String> getStatistics()
-	{
+
+	public List<String> getStatistics() {
 		return null;
 	}
 

@@ -9,6 +9,6 @@ public class PreferencesFragment extends PreferenceFragment {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.prefs);
-		
+
 	}
 }

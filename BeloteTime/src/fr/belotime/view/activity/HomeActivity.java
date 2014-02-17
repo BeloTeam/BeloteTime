@@ -60,7 +60,8 @@ public class HomeActivity extends Activity implements OnTouchListener,
 		anim_option.setFillAfter(true);
 		button_option.startAnimation(anim_option);
 
-		TranslateAnimation anim_statistique = new TranslateAnimation(1000, 0,0, 0);
+		TranslateAnimation anim_statistique = new TranslateAnimation(1000, 0,
+				0, 0);
 		anim_statistique.setDuration(DUREE_ANIM_BOUTON);
 		anim_statistique.setFillAfter(true);
 		button_stat.startAnimation(anim_statistique);
@@ -156,6 +157,9 @@ public class HomeActivity extends Activity implements OnTouchListener,
 			startActivity(intent);
 			overridePendingTransition(R.anim.push_down, R.anim.push_up);
 			break;
+		default:
+			//lever exception ici
+			break;
 		}
 
 	}
@@ -183,6 +187,8 @@ public class HomeActivity extends Activity implements OnTouchListener,
 			case R.id.activity_home_button_saisie_score:
 				button_saisie_score.startAnimation(anim_down);
 				break;
+			default:
+				//lever exception ici
 			}
 		} else if (event.getAction() == MotionEvent.ACTION_UP) {
 			switch (v.getId()) {
@@ -204,6 +210,8 @@ public class HomeActivity extends Activity implements OnTouchListener,
 			case R.id.activity_home_button_saisie_score:
 				button_saisie_score.startAnimation(anim_up);
 				break;
+			default:
+				//lever exception ici
 			}
 		}
 		return false;
