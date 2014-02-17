@@ -212,6 +212,7 @@ public class HomeActivity extends Activity implements OnTouchListener,
 				break;
 			default:
 				//lever exception ici
+				break;
 			}
 		}
 		return false;
