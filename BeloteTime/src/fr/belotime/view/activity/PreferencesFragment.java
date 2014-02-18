@@ -1,4 +1,4 @@
-package fr.belotime.view.fragment;
+package fr.belotime.view.activity;
 
 import fr.belotime.R;
 import android.os.Bundle;

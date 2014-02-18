@@ -1,7 +1,6 @@
 package fr.belotime.view.activity;
 
 import fr.belotime.R;
-import fr.belotime.view.fragment.PreferencesFragment;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 

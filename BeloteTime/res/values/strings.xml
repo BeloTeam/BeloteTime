@@ -12,11 +12,11 @@
     <string name="activity_home_img_perso_description">Personnage ecran d\'acceuil</string>
 	<string name="activity_home_launcher_context_logo">logo</string>
 	<string name="activity_home_icon_button_jouer_description">Bouton pour lancer le jeu</string>
-	<string name="activity_home_icon_button_saisie_score">"&#x6b;"</string>
-	<string name="activity_home_icon_button_apropos">"&#x75;"</string>
-	<string name="activity_home_icon_button_rules">"&#x68;"</string>
-	<string name="activity_home_icon_button_statistiques">"&#xe0f0;"</string>
-	<string name="activity_home_icon_button_option">"&#xe037;"</string>
+	<string name="activity_home_icon_button_saisie_score">&#x6b;</string>
+	<string name="activity_home_icon_button_apropos">&#x75;</string>
+	<string name="activity_home_icon_button_rules">&#x68;</string>
+	<string name="activity_home_icon_button_statistiques">&#xe0f0;</string>
+	<string name="activity_home_icon_button_option">&#xe037;</string>
 	
     <!-- String statistiques activity -->
     <string name="activity_statistique_textH">h</string>
