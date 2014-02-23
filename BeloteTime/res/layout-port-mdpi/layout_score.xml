@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3" >
+
+        <fr.belotime.view.utils.RobotoTextView
+            android:id="@+id/activity_score_icon_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1f8dd6"
+            android:textSize="25sp"
+            app:typeface="elegant"
+            android:layout_marginRight="15dp"
+            android:text="@string/activity_home_icon_button_saisie_score" />
+
+        <fr.belotime.view.utils.RobotoTextView
+            android:id="@+id/activity_score_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCORING"
+            app:typeface="roboto_thin"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#1f8dd6"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="514dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_weight="5.25" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:layout_marginBottom="10dp"
+            android:gravity="left|bottom" >
+
+            <fr.belotime.view.utils.RobotoTextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:typeface="elegant"
+                android:textColor="#1f8dd6"
+                android:textSize="25sp"
+                android:text="&#xe037;" />
+
+            <fr.belotime.view.utils.RobotoTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#1f8dd6"
+                app:typeface="roboto_thin"
+                android:text="OPTIONS" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.3"
+            android:layout_marginBottom="10dp"
+            android:gravity="center|bottom" >
+
+            <fr.belotime.view.utils.RobotoTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="#1f8dd6"
+                android:textSize="125sp"
+                app:typeface="elegant"
+                android:text="&#x50;" />
+
+            <fr.belotime.view.utils.RobotoTextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#1f8dd6"
+                app:typeface="roboto_thin"
+                android:text="AJOUTER" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:layout_marginBottom="10dp"
+            android:gravity="right|bottom" >
+
+            <fr.belotime.view.utils.RobotoTextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#1f8dd6"
+                app:typeface="roboto_thin"
+                android:text="RESET" />
+
+            <fr.belotime.view.utils.RobotoTextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:typeface="elegant"
+                android:textSize="25sp"
+                android:textColor="#1f8dd6"
+                android:text="&#xe02a;" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

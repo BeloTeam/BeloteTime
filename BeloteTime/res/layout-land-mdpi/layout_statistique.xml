@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:background="@android:color/white"
@@ -10,33 +11,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TextView
+        <fr.belotime.view.utils.RobotoTextView
             android:id="@+id/icon_stat"
             android:textSize="25sp"
             android:layout_marginTop="1dp"
             android:layout_marginLeft="200dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#1f8dd6"
+            app:typeface="elegant"
             android:text="@string/activity_statistique_icon_stat" />
 
-        <TextView
+        <fr.belotime.view.utils.RobotoTextView
             android:id="@+id/title_stat"
             android:layout_width="0dp"
             android:layout_height="40dip"
             android:gravity="left"
             android:layout_marginLeft="15dip"
             android:layout_weight="0.7"
+            app:typeface="roboto_thin"
             android:text="@string/activity_home_statistique_button_statistiques"
             android:textColor="#1f8dd6"
             android:textSize="28sp"/>
 
-        <TextView
+        <fr.belotime.view.utils.RobotoTextView
             android:id="@+id/activity_statistique_button_reset"
             android:layout_width="35dip"
             android:layout_height="35dip"
             android:layout_marginRight="10dip"
             android:layout_marginTop="1dip"
             android:textSize="25sp"
+            android:textColor="#1f8dd6"
+            app:typeface="elegant"
             android:text="@string/activity_statistique_icon_reset"
              />
 
@@ -66,7 +72,7 @@
                 android:contentDescription="@string/perso_description"
                 android:src="@drawable/stat_parties_jouees" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 
                 android:id="@+id/text_stat_nb_parties_jouees"
                 android:layout_width="wrap_content"
@@ -74,28 +80,32 @@
                 android:textColor="@android:color/black"
                 android:layout_marginTop="10dip"
                 android:layout_marginLeft="15dip"
+                app:typeface="roboto_thin"
                 android:text="@string/activity_statistique_nb_parties"
                 android:textSize="13sp" 
                 
                 />
 
-            <TextView 
+            <fr.belotime.view.utils.RobotoTextView 
                 android:id="@+id/stat_nb_parties_jouees"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="55dip"
                 android:layout_marginTop="5dip"
                 android:textSize="40sp"
+                app:typeface="roboto_thin"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#1f8dd6" />
 
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/etoile_stat_nb_parties_jouees"
                 android:layout_width="fill_parent"
                 android:gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
+                app:typeface="elegant"
+                android:textColor="#f29c3b"
                 android:text="@string/activity_statistique_icon_nb_parties_jouees" />
 
         </LinearLayout>
@@ -116,32 +126,36 @@
                 android:contentDescription="@string/perso_description"
                 android:src="@drawable/stat_gagnees" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/text_stat_pourcentage_parties_gagnees"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
                 android:layout_marginLeft="15dip"
+                app:typeface="roboto_thin"
                 android:textColor="@android:color/black"
                 android:text="@string/activity_statistique_pourcentage_parties_gagnees"
                 android:textSize="12sp" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/stat_pourcentage_parties_gagnees"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="55dip"
                 android:layout_marginTop="5dip"
                 android:textSize="40sp"
+                app:typeface="roboto_thin"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#1f8dd6" />
             
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/etoile_stat_pourcentage_parties_gagnees"
                 android:layout_width="fill_parent"
                 android:gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
+                app:typeface="elegant"
+                android:textColor="#f29c3b"
                 android:text="@string/activity_statistique_icon_pourcentage_parties_gagnees" />
         </LinearLayout>
         
@@ -161,11 +175,12 @@
                 android:contentDescription="@string/perso_description"
                 android:src="@drawable/stat_temps" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/text_stat_temps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
+                app:typeface="roboto_thin"
                 android:layout_marginLeft="15dip"
                 android:textColor="@android:color/black"
                 android:text="@string/activity_statistique_temps"
@@ -175,40 +190,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <TextView
+                <fr.belotime.view.utils.RobotoTextView
                     android:id="@+id/stat_temps_heure"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dip"
                     android:layout_marginTop="5dip"
+                    app:typeface="roboto_thin"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#1f8dd6"
                     android:textSize="40sp" />
 
-                <TextView
+                <fr.belotime.view.utils.RobotoTextView
                     android:id="@+id/stat_temps_h"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dip"
+                    app:typeface="roboto_thin"
                     android:text="@string/activity_statistique_textH"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#1f8dd6"
                     android:textSize="30sp" />
 
-                <TextView
+                <fr.belotime.view.utils.RobotoTextView
                     android:id="@+id/stat_temps_minute"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dip"
+                    app:typeface="roboto_thin"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#1f8dd6"
                     android:textSize="40sp" />
 
-                <TextView
+                <fr.belotime.view.utils.RobotoTextView
                     android:id="@+id/stat_temps_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dip"
+                    app:typeface="roboto_thin"
                     android:text="@string/activity_statistique_textMin"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#1f8dd6"
@@ -216,12 +235,14 @@
 
             </LinearLayout>
             
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/etoile_stat_temps"
                 android:layout_width="fill_parent"
                 android:gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
+                app:typeface="elegant"
+                android:textColor="#f29c3b"
                 android:text="@string/activity_statistique_icon_temps" />
 
         </LinearLayout>
@@ -252,33 +273,37 @@
                 android:contentDescription="@string/perso_description"
                 android:src="@drawable/stat_medal" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/text_stat_nb_capots"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
                 android:layout_marginLeft="15dip"
+                app:typeface="roboto_thin"
                 android:textColor="@android:color/black"
                 android:text="@string/activity_statistique_nb_capots"
                 android:textSize="13sp" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/stat_nb_capots"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="55dip"
                 android:layout_marginTop="5dip"
                 android:textSize="40sp"
+                app:typeface="roboto_thin"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#1f8dd6" />
             
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/etoile_stat_nb_capots"
                 android:layout_width="fill_parent"
                 android:gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="-15dp"
                 android:layout_height="wrap_content"
+                app:typeface="elegant"
+                android:textColor="#f29c3b"
                 android:text="@string/activity_statistique_icon_nb_capots" />
         </LinearLayout>
         
@@ -298,33 +323,37 @@
                 android:contentDescription="@string/perso_description"
                 android:src="@drawable/stat_dedans" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/text_stat_nb_dedans"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
                 android:textColor="@android:color/black"
                 android:layout_marginLeft="15dip"
+                app:typeface="roboto_thin"
                 android:text="@string/activity_statistique_nb_dedans"
                 android:textSize="13sp" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/stat_nb_dedans"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="55dip"
                 android:layout_marginTop="5dip"
                 android:textSize="40sp"
+                app:typeface="roboto_thin"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#1f8dd6" />
             
-             <TextView
+             <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/etoile_stat_nb_dedans"
                 android:layout_width="fill_parent"
                 android:gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-15dp"
+                app:typeface="elegant"
+                android:textColor="#f29c3b"
                 android:text="@string/activity_statistique_icon_nb_dedans" />
         </LinearLayout>
         
@@ -344,33 +373,37 @@
                 android:contentDescription="@string/perso_description"
                 android:src="@drawable/stat_belotes" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/text_stat_nb_belotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
                 android:layout_marginLeft="15dip"
+                app:typeface="roboto_thin"
                 android:textColor="@android:color/black"
                 android:text="@string/activity_statistique_nb_belote"
                 android:textSize="12sp" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/stat_nb_belotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="55dip"
                 android:layout_marginTop="5dip"
                 android:textSize="40sp"
+                app:typeface="roboto_thin"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#1f8dd6" />
             
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/etoile_stat_nb_belotes"
                 android:layout_width="fill_parent"
                 android:gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-15dp"
+                app:typeface="elegant"
+                android:textColor="#f29c3b"
                 android:text="@string/activity_statistique_icon_nb_belotes" />
     	</LinearLayout>
   	</LinearLayout>

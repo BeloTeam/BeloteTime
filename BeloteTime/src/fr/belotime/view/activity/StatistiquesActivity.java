@@ -50,7 +50,6 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 
 		initAttributs();
 		initDataStat();
-		initFont();
 
 		// recuperer les preferences dans une autre activites
 		// SharedPreferences prefs =
@@ -71,42 +70,6 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 		this.stat_nb_capots.setText("8");
 		this.stat_nb_belotes.setText("36");
 		this.stat_nb_dedans.setText("25");
-	}
-
-	private void initFont() {
-		Typeface elegant_font = Typeface.createFromAsset(getAssets(),
-				"fonts/ElegantIcons.ttf");
-		Typeface roboto_font = Typeface.createFromAsset(getAssets(),
-				"fonts/Roboto.ttf");
-
-		MakeFont.makeFont((TextView) findViewById(R.id.icon_stat), "#1f8dd6",
-				roboto_font);
-		MakeFont.makeFont(this.stat_title, roboto_font);
-		MakeFont.makeFont(
-				(TextView) findViewById(R.id.activity_statistique_button_reset),
-				"#1f8dd6", elegant_font);
-		MakeFont.makeFont(etoile_stat_nb_parties_jouees, "#f29c3b",
-				elegant_font);
-		MakeFont.makeFont(etoile_stat_pourcentage_parties_gagnees, "#f29c3b",
-				elegant_font);
-		MakeFont.makeFont(etoile_stat_temps, "#f29c3b", elegant_font);
-		MakeFont.makeFont(etoile_stat_nb_capots, "#f29c3b", elegant_font);
-		MakeFont.makeFont(etoile_stat_nb_belotes, "#f29c3b", elegant_font);
-		MakeFont.makeFont(etoile_stat_nb_dedans, "#f29c3b", elegant_font);
-		MakeFont.makeFont((TextView) findViewById(R.id.text_stat_nb_belotes),
-				roboto_font);
-		MakeFont.makeFont((TextView) findViewById(R.id.text_stat_nb_capots),
-				roboto_font);
-		MakeFont.makeFont((TextView) findViewById(R.id.text_stat_nb_dedans),
-				roboto_font);
-		MakeFont.makeFont(
-				(TextView) findViewById(R.id.text_stat_nb_parties_jouees),
-				roboto_font);
-		MakeFont.makeFont(
-				(TextView) findViewById(R.id.text_stat_pourcentage_parties_gagnees),
-				roboto_font);
-		MakeFont.makeFont((TextView) findViewById(R.id.text_stat_temps),
-				roboto_font);
 	}
 
 	private void initAttributs() {

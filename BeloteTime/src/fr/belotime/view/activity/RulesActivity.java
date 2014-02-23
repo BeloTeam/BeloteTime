@@ -43,7 +43,6 @@ public class RulesActivity extends Activity implements OnClickListener,
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		initAttributs();
-		initFont();
 		initRulesText();
 		initListener();
 		initAnimationRules();
@@ -82,23 +81,6 @@ public class RulesActivity extends Activity implements OnClickListener,
 				.fromHtml(getString(R.string.activity_rules_text_non_atout)));
 		activity_rules_text_rules.setText(Html
 				.fromHtml(getString(R.string.activity_rules_text_rules)));
-	}
-
-	private void initFont() {
-		Typeface tf = Typeface.createFromAsset(getAssets(),
-				"fonts/ElegantIcons.ttf");
-		Typeface roboto_font = Typeface.createFromAsset(getAssets(),
-				"fonts/Roboto.ttf");
-
-		MakeFont.makeFont(activity_rules_text_rules, roboto_font);
-		MakeFont.makeFont(activity_rules_text_atout, roboto_font);
-		MakeFont.makeFont(activity_rules_text_non_atout, roboto_font);
-		MakeFont.makeFont(activity_rules_title, roboto_font);
-		MakeFont.makeFont(activity_rules_text_list_order, roboto_font);
-		MakeFont.makeFont(activity_rules_text_list_rules, roboto_font);
-		MakeFont.makeFont(
-				(TextView) findViewById(R.id.activity_rules_icon_rules),
-				"#1f8dd6", tf);
 	}
 
 	private void initAttributs() {

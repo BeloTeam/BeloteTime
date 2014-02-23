@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -13,20 +14,22 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="15dp" >
         
-        <TextView
+        <fr.belotime.view.utils.RobotoTextView
             android:id="@+id/activity_rules_icon_rules"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            app:typeface="elegant"
             android:text="@string/activity_home_icon_button_rules"
             android:textColor="#1f8dd6"
             android:textSize="25sp" />
 
-        <TextView
+        <fr.belotime.view.utils.RobotoTextView
             android:id="@+id/activity_rules_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/activity_home_button_regles"
+            app:typeface="roboto_thin"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#1f8dd6"
             android:textSize="28sp" />
@@ -43,39 +46,28 @@
             android:layout_weight="0.8"
             android:orientation="vertical" >
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/activity_rules_text_list_rules"
                 android:layout_width="fill_parent"
                 android:layout_height="35dp"
                 android:background="#1f8dd6"
                 android:textSize="20sp"
+                app:typeface="roboto_thin"
                 android:textColor="@android:color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Règles" />
 
-            <TextView
+            <fr.belotime.view.utils.RobotoTextView
                 android:id="@+id/activity_rules_text_list_order"
                 android:layout_width="fill_parent"
                 android:layout_height="35dp"
                 android:textSize="20sp"
+                app:typeface="roboto_thin"
                 android:background="@drawable/activity_rules_font_list_view"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Ordre" />
 
         </LinearLayout>
-
-<!--         <ListView -->
-<!--             android:id="@+id/activity_rules_listView" -->
-<!--             android:layout_width="fill_parent" -->
-<!--             android:layout_height="fill_parent" -->
-<!--             android:duplicateParentState="true" -->
-<!--             android:background="@drawable/activity_rules_font_list_view" -->
-<!--             android:dividerHeight="0.6dp" -->
-<!--             android:listSelector="#1f8dd6" -->
-<!--             android:entries="@array/activity_rules_entries" -->
-<!--             android:divider="#1f8dd6" -->
-<!--             android:layout_weight="0.8" > -->
-<!--         </ListView> -->
 
         <View
             android:id="@+id/view1"
@@ -96,13 +88,13 @@
 				                android:layout_height="match_parent"
 				                android:layout_marginBottom="20dp"
 				                >
-				            <TextView
+				            <fr.belotime.view.utils.RobotoTextView
 				                android:id="@+id/activity_rules_text_rules"
 				                android:layout_width="wrap_content"
 				                android:layout_height="wrap_content"
 				                android:layout_marginRight="20dp" 
 				                android:layout_marginLeft="20dp"
-				                
+				                app:typeface="roboto_thin"
 				                android:textAlignment="gravity"
 				                android:gravity="left"
 				                android:textSize="20sp"
@@ -115,23 +107,25 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp" >
 
-                <TextView
+                <fr.belotime.view.utils.RobotoTextView
                     android:id="@+id/activity_rules_text_atout"
                     android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="0.5"
                     android:gravity="center_horizontal"
+                    app:typeface="roboto_thin"
                     android:background="@drawable/activity_rules_font_atout"
                     android:text="@string/activity_rules_text_atout" />
 
-                <TextView
+                <fr.belotime.view.utils.RobotoTextView
                     android:id="@+id/activity_rules_text_non_atout"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
                     android:gravity="center_horizontal"
                     android:textSize="20sp"
                     android:layout_weight="0.5"
+                    app:typeface="roboto_thin"
                     android:text="@string/activity_rules_text_non_atout" />
 
             </LinearLayout>
