@@ -1,28 +1,28 @@
 package fr.belotime.view.activity;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.content.res.TypedArray;
-import android.graphics.Typeface;
+import android.content.SharedPreferences.Editor;
+import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.AttributeSet;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.animation.RotateAnimation;
-import android.view.animation.TranslateAnimation;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import fr.belotime.R;
-import fr.belotime.view.utils.MakeFont;
-import fr.belotime.view.utils.StatisticsXML;
 
 public class StatistiquesActivity extends Activity implements OnClickListener {
 
@@ -41,6 +41,8 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 	private TextView etoile_stat_nb_belotes;
 	private TextView etoile_stat_nb_dedans;
 	private TextView stat_title;
+	private ArrayList<Pair<String, Integer>> statsList;
+	private SharedPreferences prefs;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,27 +51,32 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.layout_statistique);
 
 		initAttributs();
-		initDataStat();
 
-		// recuperer les preferences dans une autre activites
-		// SharedPreferences prefs =
-		// PreferenceManager.getDefaultSharedPreferences(this);
-		// stat_nb_parties_jouees.setText(prefs.getString("nomEquipe",
-		// "equipe1"));
+		PreferenceManager.setDefaultValues(this, R.xml.statistics, true);
+
+		// recuperer les stats grace au preferences
+		this.prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		initDataStat();
+		/*
+		 * Modifier les stats (a utiliser dans l'activité play) Editor editor =
+		 * prefs.edit(); editor.putString("parties_jouees", "BLA");
+		 * editor.commit();
+		 */
 		findViewById(R.id.activity_statistique_button_reset)
 				.setOnClickListener(this);
 
 	}
 
 	private void initDataStat() {
-		// init des valeurs des stats
-		this.stat_nb_parties_jouees.setText("84");
-		this.stat_pourcentage_parties_gagnees.setText("62%");
-		this.stat_temps_heure.setText("4");
-		this.stat_temps_minute.setText("52");
-		this.stat_nb_capots.setText("8");
-		this.stat_nb_belotes.setText("36");
-		this.stat_nb_dedans.setText("25");
+		this.stat_nb_parties_jouees.setText(prefs.getString("parties_jouees",
+				"0"));
+		this.stat_pourcentage_parties_gagnees.setText(prefs.getString(
+				"parties_gagnees_pourcent", "0"));
+		this.stat_temps_heure.setText(prefs.getString("temps_heure", "0"));
+		this.stat_temps_minute.setText(prefs.getString("temps_minute", "0"));
+		this.stat_nb_capots.setText(prefs.getString("capots", "0"));
+		this.stat_nb_dedans.setText(prefs.getString("dedans", "0"));
+		this.stat_nb_belotes.setText(prefs.getString("belotes", "0"));
 	}
 
 	private void initAttributs() {

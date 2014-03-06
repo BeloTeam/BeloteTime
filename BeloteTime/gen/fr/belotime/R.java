@@ -180,9 +180,9 @@ public final class R {
         public static final int textView4=0x7f060044;
         public static final int textView5=0x7f060045;
         public static final int textView6=0x7f060046;
-        public static final int textView7=0x7f060066;
         public static final int textView8=0x7f060069;
         public static final int textView9=0x7f06006a;
+        public static final int textViewTest=0x7f060066;
         public static final int text_stat_nb_belotes=0x7f060063;
         public static final int text_stat_nb_capots=0x7f06005b;
         public static final int text_stat_nb_dedans=0x7f06005f;
@@ -295,6 +295,7 @@ public final class R {
     }
     public static final class xml {
         public static final int prefs=0x7f050000;
+        public static final int statistics=0x7f050001;
     }
     public static final class styleable {
         /** Attributes that can be used with a RobotoTextView.
