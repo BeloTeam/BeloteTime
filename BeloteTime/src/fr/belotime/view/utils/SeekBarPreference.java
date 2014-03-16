@@ -24,7 +24,7 @@ public class SeekBarPreference extends DialogPreference implements
 	public SeekBarPreference(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		mContext = context;
-
+		
 		mDialogMessage = attrs.getAttributeValue(androidns, "dialogMessage");
 		mSuffix = attrs.getAttributeValue(androidns, "text");
 		mDefault = attrs.getAttributeIntValue(androidns, "defaultValue", 0);

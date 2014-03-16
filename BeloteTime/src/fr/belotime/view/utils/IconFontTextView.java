@@ -29,7 +29,7 @@ import android.widget.TextView;
  * 
  * @author Evgeny Shishkin
  */
-public class RobotoTextView extends TextView {
+public class IconFontTextView extends TextView {
 
 	/**
 	 * Simple constructor to use when creating a widget from code.
@@ -38,7 +38,7 @@ public class RobotoTextView extends TextView {
 	 *            The Context the widget is running in, through which it can
 	 *            access the current theme, resources, etc.
 	 */
-	public RobotoTextView(Context context) {
+	public IconFontTextView(Context context) {
 		super(context);
 		onInitTypeface(context, null, 0);
 	}
@@ -61,7 +61,7 @@ public class RobotoTextView extends TextView {
 	 *            The attributes of the XML tag that is inflating the widget.
 	 * @see #RobotoTextView(Context, AttributeSet, int)
 	 */
-	public RobotoTextView(Context context, AttributeSet attrs) {
+	public IconFontTextView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		onInitTypeface(context, attrs, 0);
 	}
@@ -83,7 +83,7 @@ public class RobotoTextView extends TextView {
 	 *            from the current theme, or an explicit style resource.
 	 * @see #RobotoTextView(Context, AttributeSet)
 	 */
-	public RobotoTextView(Context context, AttributeSet attrs, int defStyle) {
+	public IconFontTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		onInitTypeface(context, attrs, defStyle);
 	}
@@ -111,13 +111,13 @@ public class RobotoTextView extends TextView {
 		int typefaceValue = 0;
 		if (attrs != null) {
 			TypedArray values = context.obtainStyledAttributes(attrs,
-					R.styleable.RobotoTextView, defStyle, 0);
-			typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface,
+					R.styleable.IconFontTextView, defStyle, 0);
+			typefaceValue = values.getInt(R.styleable.IconFontTextView_typeface,
 					0);
 			values.recycle();
 		}
 
-		Typeface robotoTypeface = RobotoTypefaceManager.obtaintTypeface(
+		Typeface robotoTypeface = IconFontManager.obtaintTypeface(
 				context, typefaceValue);
 		setTypeface(robotoTypeface);
 	}

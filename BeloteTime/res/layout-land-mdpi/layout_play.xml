@@ -13,58 +13,68 @@
 
         <ImageView
             android:id="@+id/as_coeur"
+            
             android:layout_width="50dp"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="-270dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/as_coeur" />
+
         <ImageView
             android:id="@+id/neuf_carreau"
             android:layout_width="50dp"
-            android:layout_marginBottom="-270dp"
-            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/neuf_carreau" />
         <ImageView
             android:id="@+id/roi_coeur"
             android:layout_width="50dp"
-            android:layout_marginBottom="-270dp"
-            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/roi_coeur" />
         <ImageView
             android:id="@+id/dame_trefle"
             android:layout_width="50dp"
-            android:layout_marginBottom="-270dp"
-            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/dame_trefle" />
         <ImageView
             android:id="@+id/as_coeur2"
             android:layout_width="50dp"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="-270dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/as_coeur" />
         <ImageView
             android:id="@+id/neuf_carreau2"
             android:layout_width="50dp"
-            android:layout_marginBottom="-270dp"
-            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/neuf_carreau" />
         <ImageView
             android:id="@+id/roi_coeur2"
             android:layout_width="50dp"
-            android:layout_marginBottom="-270dp"
-            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/roi_coeur" />
         <ImageView
             android:id="@+id/dame_trefle2"
             android:layout_width="50dp"
-            android:layout_marginBottom="-270dp"
-            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/dame_trefle" />
 

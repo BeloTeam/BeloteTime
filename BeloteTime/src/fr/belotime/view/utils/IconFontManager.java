@@ -25,7 +25,7 @@ import android.util.SparseArray;
  * 
  * @author Evgeny Shishkin
  */
-public class RobotoTypefaceManager {
+public class IconFontManager {
 
 	/*
 	 * Available values ​​for the "typeface" attribute.

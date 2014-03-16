@@ -295,25 +295,26 @@ public final class R {
     }
     public static final class xml {
         public static final int prefs=0x7f050000;
-        public static final int statistics=0x7f050001;
+        public static final int score=0x7f050001;
+        public static final int statistics=0x7f050002;
     }
     public static final class styleable {
-        /** Attributes that can be used with a RobotoTextView.
+        /** Attributes that can be used with a IconFontTextView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #RobotoTextView_typeface fr.belotime:typeface}</code></td><td></td></tr>
+           <tr><td><code>{@link #IconFontTextView_typeface fr.belotime:typeface}</code></td><td></td></tr>
            </table>
-           @see #RobotoTextView_typeface
+           @see #IconFontTextView_typeface
          */
-        public static final int[] RobotoTextView = {
+        public static final int[] IconFontTextView = {
             0x7f010000
         };
         /**
           <p>This symbol is the offset where the {@link fr.belotime.R.attr#typeface}
-          attribute's value can be found in the {@link #RobotoTextView} array.
+          attribute's value can be found in the {@link #IconFontTextView} array.
 
 
           <p>Must be one of the following constant values.</p>
@@ -327,6 +328,6 @@ public final class R {
 </table>
           @attr name fr.belotime:typeface
         */
-        public static final int RobotoTextView_typeface = 0;
+        public static final int IconFontTextView_typeface = 0;
     };
 }

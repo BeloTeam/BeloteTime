@@ -25,7 +25,6 @@ import android.widget.Toast;
 import fr.belotime.R;
 
 public class StatistiquesActivity extends Activity implements OnClickListener {
-
 	private static final int CONFIRM_RESET = 0;
 	private TextView stat_nb_parties_jouees;
 	private TextView stat_pourcentage_parties_gagnees;

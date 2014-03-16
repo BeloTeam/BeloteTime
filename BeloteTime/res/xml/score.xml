@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="score"
+    android:title="score" >
+
+    <PreferenceCategory android:key="score_partie" >
+        <EditTextPreference
+            android:defaultValue="0"
+            android:key="score_partie_equipe1" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:key="score_partie_equipe2" />
+    </PreferenceCategory>
+    
+    
+    <PreferenceCategory android:key="score_manches" >
+        <EditTextPreference
+            android:defaultValue="0"
+            android:dialogTitle="score_manche_1_equipe1"
+            android:key="1.1" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:dialogTitle="score_manche_1_equipe2"
+            android:key="2.1" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

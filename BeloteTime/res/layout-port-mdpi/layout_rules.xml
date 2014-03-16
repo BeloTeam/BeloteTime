@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="15dp" >
 
-        <fr.belotime.view.utils.RobotoTextView
+        <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_rules_icon_rules"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             app:typeface="elegant"
             android:textSize="25sp" />
 
-        <fr.belotime.view.utils.RobotoTextView
+        <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_rules_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <fr.belotime.view.utils.RobotoTextView
+            <fr.belotime.view.utils.IconFontTextView
                 android:id="@+id/activity_rules_text_list_rules"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
@@ -57,7 +57,7 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/activity_rules_list_regles" />
 
-            <fr.belotime.view.utils.RobotoTextView
+            <fr.belotime.view.utils.IconFontTextView
                 android:id="@+id/activity_rules_text_list_order"
                 android:layout_width="fill_parent"
                 android:layout_height="35dp"
@@ -83,7 +83,7 @@
 				                android:layout_height="match_parent"
 				                android:layout_marginBottom="20dp"
 				                >
-				            <fr.belotime.view.utils.RobotoTextView
+				            <fr.belotime.view.utils.IconFontTextView
 				                android:id="@+id/activity_rules_text_rules"
 				                android:layout_width="wrap_content"
 				                android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp" >
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_rules_text_atout"
                     android:textSize="20sp"
                     android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                     android:background="@drawable/activity_rules_font_atout"
                     android:text="@string/activity_rules_text_atout" />
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_rules_text_non_atout"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"

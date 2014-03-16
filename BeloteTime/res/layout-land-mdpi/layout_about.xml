@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content" >
 
-        <fr.belotime.view.utils.RobotoTextView
+        <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_about_icon_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:layout_marginRight="15dp"
             android:text="@string/activity_about_icon_about" />
 
-        <fr.belotime.view.utils.RobotoTextView
+        <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_about_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_weight=".4"
             android:orientation="vertical" >
 
-            <fr.belotime.view.utils.RobotoTextView
+            <fr.belotime.view.utils.IconFontTextView
                 android:id="@+id/activity_about_text_informations_title"
                 android:gravity="center_horizontal"
                 android:textColor="#1f8dd6"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/activity_about_text_informations_title" />
 
-            <fr.belotime.view.utils.RobotoTextView
+            <fr.belotime.view.utils.IconFontTextView
                 android:id="@+id/activity_about_text_informations"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
@@ -86,7 +86,7 @@
             android:layout_gravity="center_horizontal"
             android:orientation="vertical" >
 
-            <fr.belotime.view.utils.RobotoTextView
+            <fr.belotime.view.utils.IconFontTextView
                 android:id="@+id/activity_about_text_contact"
                 android:gravity="center_horizontal"
                 android:textColor="#1f8dd6"
@@ -104,7 +104,7 @@
                 android:layout_marginLeft="20dp"
                 android:orientation="horizontal" >
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_about_icon_contact_mail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
                     android:textSize="19sp"
                     android:text="@string/activity_about_icon_contact_mail" />
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_about_text_contact_mail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                     android:contentDescription="@string/activity_about_img_portrait_description"
                     android:src="@drawable/icon_github" />
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_about_text_contact_github"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -157,7 +157,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <fr.belotime.view.utils.RobotoTextView
+        <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_about_text_developpeurs"
             android:layout_gravity="center_horizontal"
             android:textColor="#1f8dd6"
@@ -188,7 +188,7 @@
                     android:contentDescription="@string/activity_about_img_portrait_description"
                     android:src="@drawable/smartphone_portrait_nathan" />
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_about_text_david"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
                     android:contentDescription="@string/activity_about_img_portrait_description"
                     android:src="@drawable/smartphone_portrait_nathan" />
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_about_text_arthur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
                     android:contentDescription="@string/activity_about_img_portrait_description"
                     android:src="@drawable/smartphone_portrait_nathan" />
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_about_text_loic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -260,7 +260,7 @@
                     android:contentDescription="@string/activity_about_img_portrait_description"
                     android:src="@drawable/smartphone_portrait_nathan" />
 
-                <fr.belotime.view.utils.RobotoTextView
+                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_about_text_nathan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
