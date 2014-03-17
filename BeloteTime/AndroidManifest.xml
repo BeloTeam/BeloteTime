@@ -85,6 +85,13 @@
             android:parentActivityName="fr.belotime.view.activity.HomeActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
             ></activity>
+        
+        <activity 
+            android:name="fr.belotime.view.activity.ScoreOptionActivity"
+            android:parentActivityName="fr.belotime.view.activity.ScoreActivity"
+             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
+            android:screenOrientation="unspecified"
+            ></activity>
     </application>
 
 </manifest>

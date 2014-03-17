@@ -145,8 +145,23 @@
 	</string>
 	
 	
+	<!-- String score activity -->
+	<string name="activity_score_title">FEUILLE DE SCORE</string>
+	<string name="activity_score_button_plus">P</string>
+	<string name="activity_score_button_option_icon"></string>
+	<string name="activity_score_button_option_title">OPTIONS</string>
+	<string name="activity_score_button_regles_icon">&#x69;</string>
+	<string name="activity_score_button_regles_title">REGLES</string>
+	<string name="activity_score_button_reset_icon"></string>
+	<string name="activity_score_button_reset_title">RESET</string>
 	
-	
-	
+	<integer-array name="activity_score_values_manches_equipe1">
+		<item key="1.1">150</item>
+		<item key="1.2">180</item>
+	</integer-array>
+	<integer-array name="activity_score_values_manches_equipe2">
+		<item key="2.1">0</item>
+		<item key="2.2">160</item>
+	</integer-array>
 	
 </resources>

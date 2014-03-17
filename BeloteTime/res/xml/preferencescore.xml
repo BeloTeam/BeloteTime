@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:key="equipeName"
+        android:title="Nom des équipes" >
+        <EditTextPreference             
+            android:key="nomEquipe1"
+            android:title="Nom de l'équipe 1"
+            android:defaultValue="Nous"
+            />
+        <EditTextPreference             
+            android:key="nomEquipe2"
+            android:title="Nom de l'équipe 2"
+            android:defaultValue="Eux"
+            />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="reglagesSup"
+        android:title="Réglages" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="veille"
+            android:title="Empêcher la mise en veille" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="cumule"
+            android:title="Afficher les scores cumulés" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

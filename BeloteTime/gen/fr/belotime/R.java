@@ -21,6 +21,8 @@ public final class R {
         public static final int activity_options_entries_typeCarte=0x7f090000;
         public static final int activity_options_entry_values_typeCarte=0x7f090002;
         public static final int activity_rules_entries=0x7f090003;
+        public static final int activity_score_values_manches_equipe1=0x7f090004;
+        public static final int activity_score_values_manches_equipe2=0x7f090005;
     }
     public static final class attr {
         /** <p>Must be one of the following constant values.</p>
@@ -74,7 +76,7 @@ public final class R {
         public static final int tapis3=0x7f020019;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f060047;
+        public static final int LinearLayout1=0x7f06004b;
         public static final int activity_about_icon_about=0x7f060002;
         public static final int activity_about_icon_contact_github=0x7f06000a;
         public static final int activity_about_icon_contact_mail=0x7f060008;
@@ -122,74 +124,83 @@ public final class R {
         public static final int activity_rules_text_rules=0x7f06003b;
         public static final int activity_rules_title=0x7f060036;
         public static final int activity_rules_viewSwitcher=0x7f060039;
+        public static final int activity_score_button_ajouter=0x7f060041;
+        public static final int activity_score_button_options=0x7f060042;
+        public static final int activity_score_button_options_icon=0x7f060043;
+        public static final int activity_score_button_options_title=0x7f060044;
+        public static final int activity_score_button_regles=0x7f060045;
+        public static final int activity_score_button_regles_icon=0x7f060046;
+        public static final int activity_score_button_regles_title=0x7f060047;
+        public static final int activity_score_button_reset=0x7f060048;
+        public static final int activity_score_button_reset_icon=0x7f060049;
+        public static final int activity_score_button_reset_title=0x7f06004a;
         public static final int activity_score_icon_score=0x7f06003f;
         public static final int activity_score_title=0x7f060040;
-        public static final int activity_statistique_button_reset=0x7f06004a;
+        public static final int activity_statistique_button_reset=0x7f06004e;
         public static final int as_coeur=0x7f06002d;
         public static final int as_coeur2=0x7f060031;
         public static final int dame_trefle=0x7f060030;
         public static final int dame_trefle2=0x7f060034;
         public static final int elegant=0x7f060001;
-        public static final int etoile_stat_nb_belotes=0x7f060065;
-        public static final int etoile_stat_nb_capots=0x7f06005d;
-        public static final int etoile_stat_nb_dedans=0x7f060061;
-        public static final int etoile_stat_nb_parties_jouees=0x7f06004e;
-        public static final int etoile_stat_pourcentage_parties_gagnees=0x7f060052;
-        public static final int etoile_stat_temps=0x7f060059;
-        public static final int icon_stat=0x7f060048;
-        public static final int icon_stat_nb_belotes=0x7f060062;
-        public static final int icon_stat_nb_capots=0x7f06005a;
-        public static final int icon_stat_nb_dedans=0x7f06005e;
-        public static final int icon_stat_nb_parties_jouees=0x7f06004b;
-        public static final int icon_stat_pourcentage_parties_gagnees=0x7f06004f;
-        public static final int icon_stat_temps=0x7f060053;
+        public static final int etoile_stat_nb_belotes=0x7f060069;
+        public static final int etoile_stat_nb_capots=0x7f060061;
+        public static final int etoile_stat_nb_dedans=0x7f060065;
+        public static final int etoile_stat_nb_parties_jouees=0x7f060052;
+        public static final int etoile_stat_pourcentage_parties_gagnees=0x7f060056;
+        public static final int etoile_stat_temps=0x7f06005d;
+        public static final int icon_stat=0x7f06004c;
+        public static final int icon_stat_nb_belotes=0x7f060066;
+        public static final int icon_stat_nb_capots=0x7f06005e;
+        public static final int icon_stat_nb_dedans=0x7f060062;
+        public static final int icon_stat_nb_parties_jouees=0x7f06004f;
+        public static final int icon_stat_pourcentage_parties_gagnees=0x7f060053;
+        public static final int icon_stat_temps=0x7f060057;
         public static final int imageView1=0x7f06000d;
         public static final int imageView2=0x7f06000f;
         public static final int imageView3=0x7f060011;
         public static final int imageView4=0x7f060013;
-        public static final int imageView5=0x7f06006b;
-        public static final int imageView6=0x7f06006e;
-        public static final int menu_add=0x7f060072;
-        public static final int menu_crop=0x7f060074;
-        public static final int menu_save=0x7f060073;
-        public static final int menu_search=0x7f060071;
+        public static final int imageView5=0x7f060074;
+        public static final int imageView6=0x7f060077;
+        public static final int menu_add=0x7f06007b;
+        public static final int menu_crop=0x7f06007d;
+        public static final int menu_save=0x7f06007c;
+        public static final int menu_search=0x7f06007a;
         public static final int neuf_carreau=0x7f06002e;
         public static final int neuf_carreau2=0x7f060032;
         public static final int roboto_thin=0x7f060000;
         public static final int roi_coeur=0x7f06002f;
         public static final int roi_coeur2=0x7f060033;
         public static final int scrollView1=0x7f06003a;
-        public static final int stat_nb_belotes=0x7f060064;
-        public static final int stat_nb_capots=0x7f06005c;
-        public static final int stat_nb_dedans=0x7f060060;
-        public static final int stat_nb_parties_jouees=0x7f06004d;
-        public static final int stat_pourcentage_parties_gagnees=0x7f060051;
-        public static final int stat_temps_h=0x7f060056;
-        public static final int stat_temps_heure=0x7f060055;
-        public static final int stat_temps_min=0x7f060058;
-        public static final int stat_temps_minute=0x7f060057;
-        public static final int textView1=0x7f060041;
-        public static final int textView10=0x7f06006c;
-        public static final int textView11=0x7f06006d;
-        public static final int textView12=0x7f06006f;
-        public static final int textView13=0x7f060070;
-        public static final int textView14=0x7f060067;
-        public static final int textView15=0x7f060068;
-        public static final int textView2=0x7f060042;
-        public static final int textView3=0x7f060043;
-        public static final int textView4=0x7f060044;
-        public static final int textView5=0x7f060045;
-        public static final int textView6=0x7f060046;
-        public static final int textView8=0x7f060069;
-        public static final int textView9=0x7f06006a;
-        public static final int textViewTest=0x7f060066;
-        public static final int text_stat_nb_belotes=0x7f060063;
-        public static final int text_stat_nb_capots=0x7f06005b;
-        public static final int text_stat_nb_dedans=0x7f06005f;
-        public static final int text_stat_nb_parties_jouees=0x7f06004c;
-        public static final int text_stat_pourcentage_parties_gagnees=0x7f060050;
-        public static final int text_stat_temps=0x7f060054;
-        public static final int title_stat=0x7f060049;
+        public static final int stat_nb_belotes=0x7f060068;
+        public static final int stat_nb_capots=0x7f060060;
+        public static final int stat_nb_dedans=0x7f060064;
+        public static final int stat_nb_parties_jouees=0x7f060051;
+        public static final int stat_pourcentage_parties_gagnees=0x7f060055;
+        public static final int stat_temps_h=0x7f06005a;
+        public static final int stat_temps_heure=0x7f060059;
+        public static final int stat_temps_min=0x7f06005c;
+        public static final int stat_temps_minute=0x7f06005b;
+        public static final int textView10=0x7f060075;
+        public static final int textView11=0x7f060076;
+        public static final int textView12=0x7f060078;
+        public static final int textView13=0x7f060079;
+        public static final int textView14=0x7f060070;
+        public static final int textView15=0x7f060071;
+        public static final int textView2=0x7f06006a;
+        public static final int textView3=0x7f06006b;
+        public static final int textView4=0x7f06006c;
+        public static final int textView5=0x7f06006d;
+        public static final int textView6=0x7f06006e;
+        public static final int textView8=0x7f060072;
+        public static final int textView9=0x7f060073;
+        public static final int textViewTest=0x7f06006f;
+        public static final int text_stat_nb_belotes=0x7f060067;
+        public static final int text_stat_nb_capots=0x7f06005f;
+        public static final int text_stat_nb_dedans=0x7f060063;
+        public static final int text_stat_nb_parties_jouees=0x7f060050;
+        public static final int text_stat_pourcentage_parties_gagnees=0x7f060054;
+        public static final int text_stat_temps=0x7f060058;
+        public static final int title_stat=0x7f06004d;
         public static final int view1=0x7f060006;
     }
     public static final class layout {
@@ -241,6 +252,16 @@ public final class R {
         public static final int activity_rules_text_atout=0x7f080030;
         public static final int activity_rules_text_non_atout=0x7f080031;
         public static final int activity_rules_text_rules=0x7f08002f;
+        public static final int activity_score_button_option_icon=0x7f080034;
+        public static final int activity_score_button_option_title=0x7f080035;
+        public static final int activity_score_button_plus=0x7f080033;
+        public static final int activity_score_button_regles_icon=0x7f080036;
+        public static final int activity_score_button_regles_title=0x7f080037;
+        public static final int activity_score_button_reset_icon=0x7f080038;
+        public static final int activity_score_button_reset_title=0x7f080039;
+        /**  String score activity 
+         */
+        public static final int activity_score_title=0x7f080032;
         public static final int activity_statistique_icon_nb_belotes=0x7f08001a;
         public static final int activity_statistique_icon_nb_capots=0x7f08001c;
         public static final int activity_statistique_icon_nb_dedans=0x7f08001b;
@@ -294,9 +315,10 @@ public final class R {
         public static final int AppTheme=0x7f0a0001;
     }
     public static final class xml {
-        public static final int prefs=0x7f050000;
-        public static final int score=0x7f050001;
-        public static final int statistics=0x7f050002;
+        public static final int preferencescore=0x7f050000;
+        public static final int prefs=0x7f050001;
+        public static final int score=0x7f050002;
+        public static final int statistics=0x7f050003;
     }
     public static final class styleable {
         /** Attributes that can be used with a IconFontTextView.
