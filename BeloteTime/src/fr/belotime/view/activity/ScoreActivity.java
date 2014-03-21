@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -44,38 +45,54 @@ import android.widget.Toast;
 
 public class ScoreActivity extends Activity implements OnClickListener {
 	private SharedPreferences prefs;
-	private int[] listeScoreMancheEquipe1;
-	private int[] listeScoreMancheEquipe2;
+	private List<Integer> listeScoreMancheEquipe1;
+	private List<Integer> listeScoreMancheEquipe2;
 	private int scorePartieEquipe1;
 	private int scorePartieEquipe2;
+	private int nbManches;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_score);
-		
+		//init attributs
 		this.findViewById(R.id.activity_score_button_ajouter).setOnClickListener(this);
 		this.findViewById(R.id.activity_score_button_options).setOnClickListener(this);
 		this.findViewById(R.id.activity_score_button_regles).setOnClickListener(this);
 		this.findViewById(R.id.activity_score_button_reset).setOnClickListener(this);
 		
-		PreferenceManager.setDefaultValues(this, R.xml.score, false);
+		PreferenceManager.setDefaultValues(this, R.xml.score, true);
 		// recuperer les stats grace au preferences
 		this.prefs = PreferenceManager.getDefaultSharedPreferences(this);
-		this.listeScoreMancheEquipe1 = getResources().getIntArray(R.array.activity_score_values_manches_equipe1);
-		this.listeScoreMancheEquipe2 = getResources().getIntArray(R.array.activity_score_values_manches_equipe2);
+		
+
+		this.nbManches = Integer.parseInt(this.prefs.getString("nbManches", "0"));
+		this.listeScoreMancheEquipe1 = new ArrayList<Integer>();
+		this.listeScoreMancheEquipe2 = new ArrayList<Integer>();	
+
+		//recuperation des scores
+		for (int i = 1; i <= nbManches ; i++) {
+			this.listeScoreMancheEquipe1.add(Integer.parseInt(this.prefs.getString("scoreManchesEquipe1."+i, "0")));
+		}
+		for (int i = 1; i <= nbManches; i++) {
+			this.listeScoreMancheEquipe2.add(Integer.parseInt(this.prefs.getString("scoreManchesEquipe2."+i, "0")));
+		}
+		
+		//affichages des scores
+		((TextView)findViewById(R.id.textViewScoreTest)).
+		setText("Taille : "+this.listeScoreMancheEquipe1.size()+"\nEquipe 1 : \n"+this.listeScoreMancheEquipe1.toString());
+		
 		this.scorePartieEquipe1 = 0;
 		this.scorePartieEquipe2 = 0;
-		
-		for (int i = 0; i < listeScoreMancheEquipe1.length; i++) {
-			this.scorePartieEquipe1 += listeScoreMancheEquipe1[i];
+
+		for (int score : this.listeScoreMancheEquipe1) {
+			this.scorePartieEquipe1+=score;
 		}
-		for (int i = 0; i < listeScoreMancheEquipe2.length; i++) {
-			this.scorePartieEquipe2 += listeScoreMancheEquipe2[i];
+		for (int score : this.listeScoreMancheEquipe2) {
+			this.scorePartieEquipe2+=score;
 		}
-		
-		Toast.makeText(this, "Total : "+this.scorePartieEquipe1,Toast.LENGTH_SHORT).show();
+
 		this.refreshScore();
 	}
 
@@ -126,29 +143,40 @@ public class ScoreActivity extends Activity implements OnClickListener {
 
 	private void ajouterScore() {
 		// TODO Auto-generated method stub
-		
+		Editor editor = prefs.edit();
+		editor.putString("scoreManchesEquipe1."+(this.nbManches+1), "50");
+		editor.putString("scoreManchesEquipe2."+(this.nbManches+1), "20");
+		this.nbManches++;
+		editor.putString("nbManches", this.nbManches+"");
+		editor.commit();
+		((TextView)findViewById(R.id.textViewScoreTest)).setText("AJOUT : \n"+this.prefs.getAll().toString());
 	}
 
+	
 
 
 	private void clearScore() {
 		//modifier le treeSet pour faire un RAZ
 		Editor editor = prefs.edit();
-		for (int i = 0; i < this.listeScoreMancheEquipe1.length; i++) {
-			editor.remove("1."+(i+1));
+		/*for (int i = 1; i <= this.listeScoreMancheEquipe1.size(); i++) {
+			editor.remove("scoreManchesEquipe1."+(i+1)).commit();
 		}
-		for (int i = 0; i < this.listeScoreMancheEquipe2.length; i++) {
-			editor.remove("2."+(i+1));
-		}
+		for (int i = 1; i <= this.listeScoreMancheEquipe2.size(); i++) {
+			editor.remove("scoreManchesEquipe2."+(i+1)).commit();
+			
+		}*/
+		editor.putString("nbManches", "0");
+		editor.clear();
 		
+		this.nbManches=0;
 		this.scorePartieEquipe1 = 0;
 		this.scorePartieEquipe2 = 0;
+		this.listeScoreMancheEquipe1.clear();
+		this.listeScoreMancheEquipe2.clear();
 		
 		editor.commit();
-
+		((TextView)findViewById(R.id.textViewScoreTest)).setText("Reset : \n"+this.prefs.getAll().toString());
 		this.refreshScore();
-		this.listeScoreMancheEquipe1 = getResources().getIntArray(R.array.activity_score_values_manches_equipe1);
-		Toast.makeText(this, "Total : "+this.scorePartieEquipe1,Toast.LENGTH_SHORT).show();
 	}
 
 

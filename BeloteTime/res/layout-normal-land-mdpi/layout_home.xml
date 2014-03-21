@@ -16,8 +16,8 @@
             android:id="@+id/activity_home_img_perso_gauche"
             android:layout_width="80dip"
 			android:layout_height="80dip"
-            android:layout_marginTop="70dip"
-            android:layout_marginLeft="20dip"
+            android:layout_marginTop="90dip"
+            android:layout_marginLeft="10dip"
             android:contentDescription="@string/activity_home_statistique_button_statistiques"
             android:src="@drawable/perso2"/>
 
@@ -26,7 +26,7 @@
             android:layout_width="420dip"
             android:layout_height="150dip"
             android:layout_marginTop="20dip"
-            android:layout_marginLeft="20dip"
+            android:layout_marginLeft="10dip"
             android:background="@android:color/transparent"
             android:layout_marginRight="15dip"
             android:contentDescription="@string/activity_home_launcher_context_logo"
@@ -37,7 +37,7 @@
 			android:layout_width="80dip"
 			android:layout_height="80dip"
 			android:layout_marginTop="20dip"
-			android:layout_marginRight="70dip"
+			android:layout_marginLeft="-25dip"
             android:contentDescription="@string/perso_description"
             android:src="@drawable/perso3" />
 

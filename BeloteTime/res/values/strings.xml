@@ -14,7 +14,7 @@
 	<string name="activity_home_icon_button_jouer_description">Bouton pour lancer le jeu</string>
 	<string name="activity_home_icon_button_saisie_score">&#x6b;</string>
 	<string name="activity_home_icon_button_apropos">&#x75;</string>
-	<string name="activity_home_icon_button_rules">&#x68;</string>
+	<string name="activity_home_icon_button_rules">&#x69;</string>
 	<string name="activity_home_icon_button_statistiques">&#xe0f0;</string>
 	<string name="activity_home_icon_button_option">&#xe037;</string>
 	
@@ -26,17 +26,16 @@
     <string name="activity_statistique_temps">Temps total passé à jouer</string>
     <string name="activity_statistique_nb_capots">Nombre total de capots</string>
     <string name="activity_statistique_nb_dedans">Nombre total de dedans</string>
-    <string name="activity_statistique_nb_belote">Nombre total de belotes/rebelotes</string>
+    <string name="activity_statistique_nb_belote">Nombre de belotes/rebelotes</string>
 	<string name="activity_statistique_icon_stat">&#xe0f0;</string>
     <string name="activity_statistique_icon_reset">&#xe02a;</string>
     
-    <string name="activity_statistique_icon_nb_belotes">&#xe033;&#xe033;&#xe033;&#xe033;&#xe031;</string>
-    <string name="activity_statistique_icon_nb_dedans">&#xe032;&#xe031;&#xe031;&#xe031;&#xe031;</string>
-    <string name="activity_statistique_icon_nb_capots">&#xe033;&#xe032;&#xe031;&#xe031;&#xe031;</string>
-    <string name="activity_statistique_icon_temps">&#xe033;&#xe033;&#xe031;&#xe031;&#xe031;</string>
-    <string name="activity_statistique_icon_pourcentage_parties_gagnees">&#xe033;&#xe033;&#xe033;&#xe031;&#xe031;</string>
-    <string name="activity_statistique_icon_nb_parties_jouees">&#xe033;&#xe033;&#xe032;&#xe031;&#xe031;</string>
-    
+    <string name="activity_statistique_icon_0_etoile">&#xe031;&#xe031;&#xe031;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_1_etoile">&#xe033;&#xe031;&#xe031;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_2_etoile">&#xe033;&#xe033;&#xe031;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_3_etoile">&#xe033;&#xe033;&#xe033;&#xe031;&#xe031;</string>
+    <string name="activity_statistique_icon_4_etoile">&#xe033;&#xe033;&#xe033;&#xe033;&#xe031;</string>
+    <string name="activity_statistique_icon_5_etoile">&#xe033;&#xe033;&#xe033;&#xe033;&#xe033;</string>
     
     <!-- String about activity -->
     <string name="activity_about_icon_about">&#x74;</string>
@@ -45,7 +44,7 @@
     <string name="activity_about_text_contact">CONTACT</string>
     <string name="activity_about_icon_contact_mail">&#xe076;</string>
     <string name="activity_about_text_contact_mail"><u>BeloTeam@gmail.com</u></string>
-    <string name="activity_about_text_contact_github"><u>https://github.com/BeloTeam/BeloteTime</u></string>
+    <string name="activity_about_text_contact_github"><u>http://beloteam.github.io/BeloteTime</u></string>
     <string name="activity_about_text_developpeurs">DEVELOPPEURS</string>
     <string name="activity_about_text_david">David Bernard</string>
     <string name="activity_about_text_arthur">Arthur Frin</string>

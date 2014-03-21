@@ -34,11 +34,12 @@
 
     </LinearLayout>
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="wrap_content"
-        android:layout_height="290dp"
-        android:layout_weight="0.69" />
+    <TextView
+        android:id="@+id/textViewScoreTest"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02"
+        android:text="TextView" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,12 +54,13 @@
             android:layout_marginBottom="20dp"
             android:text="@string/activity_score_button_plus"
             android:textColor="#1f8dd6"
-            android:textSize="125sp"
+            android:textSize="65sp"
             app:typeface="elegant" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="8dp">
 
             <LinearLayout
                 android:id="@+id/activity_score_button_options"
@@ -72,10 +74,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="5dp"
                     android:text="@string/activity_score_button_option_icon"
                     android:textColor="#1f8dd6"
-                    android:textSize="25sp"
+                    android:textSize="16sp"
                     app:typeface="elegant" />
 
                 <fr.belotime.view.utils.IconFontTextView
@@ -84,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/activity_score_button_option_title"
                     android:textColor="#1f8dd6"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     app:typeface="roboto_thin" />
             </LinearLayout>
 
@@ -101,10 +103,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="5dp"
                     android:text="@string/activity_score_button_regles_icon"
                     android:textColor="#1f8dd6"
-                    android:textSize="25sp"
+                    android:textSize="16sp"
                     app:typeface="elegant" />
                 
                 <fr.belotime.view.utils.IconFontTextView
@@ -113,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/activity_score_button_regles_title"
                     android:textColor="#1f8dd6"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     app:typeface="roboto_thin" />
             </LinearLayout>
 
@@ -125,24 +127,27 @@
                 android:gravity="right|bottom" >
 
                 <fr.belotime.view.utils.IconFontTextView
-                    android:id="@+id/activity_score_button_reset_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/activity_score_button_reset_title"
-                    android:textColor="#1f8dd6"
-                    android:textSize="25sp"
-                    app:typeface="roboto_thin" />
-
-                <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_score_button_reset_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    
                     android:text="@string/activity_score_button_reset_icon"
                     android:textColor="#1f8dd6"
-                    android:textSize="25sp"
+                    android:textSize="16sp"
                     app:typeface="elegant" />
+                
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/activity_score_button_reset_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/activity_score_button_reset_title"
+                    android:textColor="#1f8dd6"
+                    android:textSize="18sp"
+                    app:typeface="roboto_thin" />
+
+                
             </LinearLayout>
         </LinearLayout>
 

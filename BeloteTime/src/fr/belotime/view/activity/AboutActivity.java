@@ -55,17 +55,17 @@ public class AboutActivity extends Activity implements OnTouchListener {
 		switch (v.getId()) {
 		case R.id.activity_about_text_contact_github:
 			Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-					Uri.parse("https://github.com/BeloTeam/BeloteTime"));
+					Uri.parse("http://beloteam.github.io/BeloteTime"));
 			startActivity(browserIntent);
 			break;
 		case R.id.activity_about_text_contact_mail:
 			Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 			emailIntent.setType("plain/text");
 			emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
-					new String[] { "to@email.com" });
+					new String[] { "beloteam@gmail.com" });
 			emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,
-					"Subject");
-			emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Text");
+					"");
+			emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
 			startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 			break;
 		default:

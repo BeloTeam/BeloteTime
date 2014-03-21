@@ -50,17 +50,12 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.layout_statistique);
 
 		initAttributs();
-
 		PreferenceManager.setDefaultValues(this, R.xml.statistics, true);
 
 		// recuperer les stats grace au preferences
 		this.prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		initDataStat();
-		/*
-		 * Modifier les stats (a utiliser dans l'activité play) Editor editor =
-		 * prefs.edit(); editor.putString("parties_jouees", "BLA");
-		 * editor.commit();
-		 */
+		
 		findViewById(R.id.activity_statistique_button_reset)
 				.setOnClickListener(this);
 
@@ -76,6 +71,50 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 		this.stat_nb_capots.setText(prefs.getString("capots", "0"));
 		this.stat_nb_dedans.setText(prefs.getString("dedans", "0"));
 		this.stat_nb_belotes.setText(prefs.getString("belotes", "0"));
+		
+		
+		initEtoiles(this.etoile_stat_temps,prefs.getString("temps_etoiles", "0"));
+		initEtoiles(this.etoile_stat_nb_belotes,prefs.getString("belotes_etoiles", "0"));
+		initEtoiles(this.etoile_stat_nb_capots,prefs.getString("capots_etoiles", "0"));
+		initEtoiles(this.etoile_stat_nb_dedans,prefs.getString("dedans_etoiles", "0"));
+		initEtoiles(this.etoile_stat_nb_parties_jouees,prefs.getString("parties_jouees_etoiles", "0"));
+		initEtoiles(this.etoile_stat_pourcentage_parties_gagnees,prefs.
+				getString("parties_gagnees_pourcent_etoiles", "0"));
+	}
+
+	private void initEtoiles(TextView etoileView, String nbEtoile) {
+		int nb;
+		try {
+			nb = Integer.parseInt(nbEtoile);
+		} catch (Exception e) {
+			e.printStackTrace();
+			nb = 0;
+		}
+
+		// TODO Auto-generated method stub
+		switch (nb) {
+		case 0:
+			etoileView.setText(R.string.activity_statistique_icon_0_etoile);
+			break;
+		case 1:
+			etoileView.setText(R.string.activity_statistique_icon_1_etoile);
+			break;
+		case 2:
+			etoileView.setText(R.string.activity_statistique_icon_2_etoile);
+			break;
+		case 3:
+			etoileView.setText(R.string.activity_statistique_icon_3_etoile);
+			break;
+		case 4:
+			etoileView.setText(R.string.activity_statistique_icon_4_etoile);
+			break;
+		case 5:
+			etoileView.setText(R.string.activity_statistique_icon_5_etoile);
+			break;
+		default:
+			//lever un exception
+			break;
+		}
 	}
 
 	private void initAttributs() {
@@ -130,6 +169,7 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 								public void onClick(DialogInterface dialog,
 										int id) {
 									// reinit les stat
+									resetStats();
 								}
 							}).setNegativeButton("Non", null);
 			builder.setTitle("REINITIALISATION STATISTIQUES");
@@ -140,6 +180,27 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 		}
 		return dialog;
 
+	}
+	
+	private void resetStats(){
+		Editor editor = prefs.edit(); 
+		editor.putString("parties_jouees", "0");
+		editor.putString("parties_gagnees_pourcent", "0");
+		editor.putString("temps_heure", "0");
+		editor.putString("temps_minute", "0");
+		editor.putString("capots", "0");
+		editor.putString("dedans", "0");
+		editor.putString("belotes", "0");
+		
+		editor.putString("parties_jouees_etoiles", "0");
+		editor.putString("parties_gagnees_pourcent_etoiles", "0");
+		editor.putString("temps_etoiles", "0");
+		editor.putString("capots_etoiles", "0");
+		editor.putString("dedans_etoiles", "0");
+		editor.putString("belotes_etoiles", "0");
+		
+		editor.commit(); 
+		this.initDataStat();
 	}
 
 }

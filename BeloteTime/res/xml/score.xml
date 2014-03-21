@@ -3,15 +3,20 @@
     android:key="score"
     android:title="score" >
     
-    <PreferenceCategory android:key="score_manches" >
-
         <ListPreference android:key="scoreManchesEquipe1"
             android:persistent="true"
             android:entryValues="@array/activity_score_values_manches_equipe1" />
 
         <ListPreference android:key="scoreManchesEquipe2" 
             android:entryValues="@array/activity_score_values_manches_equipe2"/>
- 
-    </PreferenceCategory>
 
+    <EditTextPreference android:key="nbManches"  android:defaultValue="3"/>   
+	<EditTextPreference android:key="scoreManchesEquipe1.1"  android:defaultValue="80"/>
+	<EditTextPreference android:key="scoreManchesEquipe1.2"  android:defaultValue="90"/>
+	<EditTextPreference android:key="scoreManchesEquipe1.3"  android:defaultValue="120"/>
+	
+	<EditTextPreference android:key="scoreManchesEquipe2.1"  android:defaultValue="80"/>
+	<EditTextPreference android:key="scoreManchesEquipe2.2"  android:defaultValue="70"/>
+	<EditTextPreference android:key="scoreManchesEquipe2.3"  android:defaultValue="40"/>
+	
 </PreferenceScreen>
