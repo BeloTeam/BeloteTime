@@ -154,13 +154,10 @@
 	<string name="activity_score_button_reset_icon"></string>
 	<string name="activity_score_button_reset_title">RESET</string>
 	
-	<integer-array name="activity_score_values_manches_equipe1">
-		<item key="1.1">150</item>
-		<item key="1.2">180</item>
-	</integer-array>
-	<integer-array name="activity_score_values_manches_equipe2">
-		<item key="2.1">0</item>
-		<item key="2.2">160</item>
-	</integer-array>
+	<string name="activity_score_ajouter_equipe_prompt">Choisir une equipe</string>
+    <string-array name="activity_score_ajouter_equipe_arrays">
+        <item>Equipe 1</item>
+        <item>Equipe 2</item>
+    </string-array>
 	
 </resources>
