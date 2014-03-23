@@ -11,7 +11,7 @@ public class ScoreOptionActivity extends PreferenceActivity {
 	 protected void onCreate(Bundle savedInstanceState) {
 	  // TODO Auto-generated method stub
 	  super.onCreate(savedInstanceState);
-
+	  overridePendingTransition(R.anim.push_down, R.anim.push_up);
 	  PreferenceManager.setDefaultValues(this, R.xml.preferencescore, false);
 	  
 	  /*Appel de la class Preference pour lancer l'écran des preferences*/

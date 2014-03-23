@@ -7,6 +7,8 @@
             android:key="nomEquipe1"
             android:title="Nom de l'équipe 1"
             android:defaultValue="Nous"
+            android:dialogTitle="Saisir le nom de l'équipe"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
             android:maxLength="10"
             />
         <EditTextPreference             
@@ -14,6 +16,8 @@
             android:title="Nom de l'équipe 2"
             android:defaultValue="Eux"
             android:maxLength="10"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
+            android:dialogTitle="Saisir le nom de l'équipe"
             />
     </PreferenceCategory>
     

@@ -9,6 +9,7 @@
             android:key="typeCarte" 
             android:defaultValue="0"
             android:entryValues="@array/activity_options_entry_values_typeCarte" 
+            android:dialogIcon="@android:drawable/ic_menu_sort_by_size"
             android:entries="@array/activity_options_entries_typeCarte"/>
         
         <ListPreference
@@ -16,6 +17,7 @@
             android:key="affScore"
             android:defaultValue="Manche"
             android:entryValues="@array/activity_options_entries_score" 
+            android:dialogIcon="@android:drawable/ic_menu_sort_by_size"
             android:entries="@array/activity_options_entries_score"/>
         
 		<fr.belotime.view.utils.SeekBarPreference
@@ -40,16 +42,22 @@
             android:key="nomEquipe"
             android:title="Nom de l'équipe"
             android:defaultValue="equipe1"
+            android:dialogTitle="Saisir le nom de votre équipe"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
             />
         <EditTextPreference 
             android:key="nomJoueur"
             android:title="Nom du joueur"
             android:defaultValue="joueur1"
+            android:dialogTitle="Saisir votre nom"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
             />
         <EditTextPreference 
             android:key="nomCoequipier"
             android:title="Nom du coequipier"
             android:defaultValue="joueur2"
+            android:dialogTitle="Saisir le nom de du coéquipier"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
             />
         
     </PreferenceCategory>
