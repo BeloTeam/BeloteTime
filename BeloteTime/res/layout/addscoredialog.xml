@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/activity_score_text_score_equipe1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Score équipe 1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/activity_score_editText_score_equipe1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:maxLength="3"
+        android:hint="Saisir score"
+        android:inputType="number"><requestFocus /></EditText>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:background="#33b5e5"
+        android:layout_marginBottom="20dp"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:id="@+id/activity_score_text_score_equipe2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score équipe 2"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/activity_score_editText_score_equipe2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="3"
+        android:hint="Saisir score"
+        android:layout_marginBottom="15dp"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+    
+    <Button
+        android:id="@+id/activity_score_button_valider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:background="#1f8dd6"
+        android:text="Valider" />
+
+</LinearLayout>

@@ -7,51 +7,553 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.05" >
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" >
 
         <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_score_icon_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="@string/activity_home_icon_button_saisie_score"
             android:textColor="#1f8dd6"
             android:textSize="25sp"
-            app:typeface="elegant"
-            android:layout_marginRight="15dp"
-            android:text="@string/activity_home_icon_button_saisie_score" />
+            app:typeface="elegant" />
 
         <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_score_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/activity_score_title"
-            app:typeface="roboto_thin"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#1f8dd6"
-            android:textSize="28sp" />
-
+            android:textSize="28sp"
+            app:typeface="roboto_thin" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textViewScoreTest"
         android:layout_width="323dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.02"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
         android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <fr.belotime.view.utils.IconFontTextView
+            android:id="@+id/activity_score_text_equipe1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:text="Equipe 1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#1f8dd6"
+            app:typeface="roboto_thin" />
+
+        <fr.belotime.view.utils.IconFontTextView
+            android:id="@+id/activity_score_text_equipe2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:text="Equipe 2"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#1f8dd6"
+            app:typeface="roboto_thin" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/activity_score_scroll_view_scores"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="5dp" >
+
+        <TableLayout
+            android:id="@+id/activity_score_table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:gravity="center_horizontal" >
+
+            <TableRow
+                android:id="@+id/activity_score_table_row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/activity_score_table_manche1_equipe1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="150dp"
+                    android:text="110"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/activity_score_table_manche1_equipe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="50"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="80"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="80"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="40"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="120"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+                        <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+                        <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+                        <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+                        <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+                        <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+                        <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <fr.belotime.view.utils.IconFontTextView
+                    android:id="@+id/productQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="90"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.29"
+        android:orientation="horizontal" >
+
+        <fr.belotime.view.utils.IconFontTextView
+            android:id="@+id/activity_score_partie_equipe1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:textColor="#1f8dd6"
+            app:typeface="roboto_thin"
+            android:text="850"
+            android:textSize="36sp" />
+
+        <fr.belotime.view.utils.IconFontTextView
+            android:id="@+id/activity_score_table_manche1_equipe2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:textColor="#1f8dd6"
+            app:typeface="roboto_thin"
+            android:text="790"
+            android:textSize="36sp" />
+        
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-        
+
         <fr.belotime.view.utils.IconFontTextView
             android:id="@+id/activity_score_button_ajouter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/activity_score_button_plus"
             android:textColor="#1f8dd6"
             android:textSize="65sp"
@@ -59,8 +561,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
-            android:layout_marginBottom="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" >
 
             <LinearLayout
                 android:id="@+id/activity_score_button_options"
@@ -97,7 +599,7 @@
                 android:layout_weight="0.3"
                 android:gravity="center|bottom"
                 android:orientation="horizontal" >
-                
+
                 <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_score_button_regles_icon"
                     android:layout_width="wrap_content"
@@ -108,7 +610,7 @@
                     android:textColor="#1f8dd6"
                     android:textSize="16sp"
                     app:typeface="elegant" />
-                
+
                 <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_score_button_regles_title"
                     android:layout_width="wrap_content"
@@ -130,12 +632,11 @@
                     android:id="@+id/activity_score_button_reset_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    
                     android:text="@string/activity_score_button_reset_icon"
                     android:textColor="#1f8dd6"
                     android:textSize="16sp"
                     app:typeface="elegant" />
-                
+
                 <fr.belotime.view.utils.IconFontTextView
                     android:id="@+id/activity_score_button_reset_icon"
                     android:layout_width="wrap_content"
@@ -146,12 +647,8 @@
                     android:textColor="#1f8dd6"
                     android:textSize="18sp"
                     app:typeface="roboto_thin" />
-
-                
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>
-

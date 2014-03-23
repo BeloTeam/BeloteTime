@@ -7,11 +7,13 @@
             android:key="nomEquipe1"
             android:title="Nom de l'équipe 1"
             android:defaultValue="Nous"
+            android:maxLength="10"
             />
         <EditTextPreference             
             android:key="nomEquipe2"
             android:title="Nom de l'équipe 2"
             android:defaultValue="Eux"
+            android:maxLength="10"
             />
     </PreferenceCategory>
     

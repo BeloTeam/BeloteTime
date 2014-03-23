@@ -10,7 +10,9 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -41,7 +43,18 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		PreferenceManager.setDefaultValues(this, R.xml.score, true);
 		this.prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		
+		//init nom dequipes a faire aussi dans le onpause
+		initScore();
 		
+		
+		//si on a empecher la veille
+		if(this.prefs.getBoolean("veille",true)){
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		}
+		else {
+			getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		}
+
 		// recuperer les stats grace au preferences
 		this.nbManches = Integer.parseInt(this.prefs.getString("nbManches", "0"));
 		this.listeScoreMancheEquipe1 = new ArrayList<Integer>();
@@ -58,7 +71,8 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		
 		//affichages des scores
 		String affich = this.listeScoreMancheEquipe1.size()+"\n "+this.listeScoreMancheEquipe1.toString();
-		((TextView)findViewById(R.id.textViewScoreTest)).setText(affich);
+		Log.d("scores", affich);
+		
 		
 		
 		this.scorePartieEquipe1 = 0;
@@ -76,10 +90,37 @@ public class ScoreActivity extends Activity implements OnClickListener {
 	}
 
 
+	private void initScore() {
+		((TextView)this.findViewById(R.id.activity_score_text_equipe1)).setText(this.prefs.getString("nomEquipe1", "Nous"));
+		((TextView)this.findViewById(R.id.activity_score_text_equipe2)).setText(this.prefs.getString("nomEquipe2", "Eux"));
+	}
+
+
 	@Override
 	protected void onPause() {
 		super.onPause();
 		overridePendingTransition(R.anim.push_down, R.anim.push_up);
+		// si on a empecher la veille
+		if (this.prefs.getBoolean("veille", true)) {
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		}
+		this.initScore();
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		overridePendingTransition(R.anim.push_down, R.anim.push_up);
+		// si on a empecher la veille
+		if (this.prefs.getBoolean("veille", true)) {
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		}
+		else {
+			getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		}
+			
+		this.initScore();
 	}
 
 
@@ -138,7 +179,23 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		this.nbManches++;
 		editor.putString("nbManches", this.nbManches+"");
 		editor.commit();
-		((TextView)findViewById(R.id.textViewScoreTest)).setText("AJOUT : \n"+this.prefs.getAll().toString());
+		Log.d("scores", "AJOUT : \n"+this.prefs.getAll().toString());
+		
+		
+		/* Find Tablelayout defined in main.xml */
+		//TableLayout tl = (TableLayout) findViewById(R.id.SaleOrderLines);
+		/* Create a new row to be added. */
+		//TableRow tr = new TableRow(this);
+		//tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+		/* Create a Button to be the row-content. */
+		//Button b = new Button(this);
+		//b.setText("Dynamic Button");
+		//b.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+		/* Add Button to row. */
+		//tr.addView(b);
+		/* Add row to TableLayout. */
+		//tr.setBackgroundResource(R.drawable.sf_gradient_03);
+		//tl.addView(tr, new TableLayout.LayoutParams(TableLayout.LayoutParams.FILL_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
 	}
 
 
@@ -179,7 +236,7 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		this.listeScoreMancheEquipe1.clear();
 		this.listeScoreMancheEquipe2.clear();
 		
-		((TextView)findViewById(R.id.textViewScoreTest)).setText("Reset : \n"+this.prefs.getAll().toString());
+		Log.d("scores","Reset : \n"+this.prefs.getAll().toString());
 		this.refreshScore();
 	}
 
