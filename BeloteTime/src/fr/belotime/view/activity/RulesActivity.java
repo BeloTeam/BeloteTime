@@ -1,10 +1,8 @@
 package fr.belotime.view.activity;
 
 import fr.belotime.R;
-import fr.belotime.view.utils.MakeFont;
 import android.app.Activity;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.GestureDetector;
@@ -17,7 +15,6 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 public class RulesActivity extends Activity implements OnClickListener,
@@ -31,13 +28,12 @@ public class RulesActivity extends Activity implements OnClickListener,
 	private TextView activity_rules_text_list_rules;
 	private TextView activity_rules_text_list_order;
 	private boolean list_rules_selected = true;
-	private TextView activity_rules_title;
+	@SuppressWarnings("deprecation")
 	private final GestureDetector gestureDetector = new GestureDetector(
 			new GestureListener());
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_rules);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -90,22 +86,16 @@ public class RulesActivity extends Activity implements OnClickListener,
 		activity_rules_text_list_order = (TextView) findViewById(R.id.activity_rules_text_list_order);
 		activity_rules_text_non_atout = (TextView) findViewById(R.id.activity_rules_text_non_atout);
 		activity_rules_view_switcher = (ViewSwitcher) findViewById(R.id.activity_rules_viewSwitcher);
-		activity_rules_title = (TextView) findViewById(R.id.activity_rules_title);
 	}
 
 	@Override
 	protected void onPause() {
-		// TODO Auto-generated method stub
 		super.onPause();
 		overridePendingTransition(R.anim.push_down, R.anim.push_up);
 	}
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		// Toast.makeText(this,
-		// v.getId()+" "+R.id.activity_rules_text_list_rules,
-		// Toast.LENGTH_SHORT).show();
 		switch (v.getId()) {
 		case R.id.activity_rules_text_list_rules:
 			switchRulesLeft();

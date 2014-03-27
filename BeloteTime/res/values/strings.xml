@@ -54,18 +54,21 @@
     
 	
     <!-- String options activity -->
-    <string-array name="activity_options_entries_typeCarte">
-		<item >Cartes classiques</item>
-		<item >Cartes modernes</item>
+    <string-array name="activity_options_entries_niveau_ia">
+		<item >Débutant</item>
+		<item >Intermédiaire</item>
+		<item >Confirmé</item>
+	</string-array>
+	<string-array name="activity_options_entry_values_niveau_ia">
+		<item >0</item>
+		<item >1</item>
+		<item >2</item>
 	</string-array>
 	<string-array name="activity_options_entries_score">
 		<item >Manche</item>
 		<item >Partie</item>
 	</string-array>
-	<string-array name="activity_options_entry_values_typeCarte">
-		<item >0</item>
-		<item >1</item>
-	</string-array>
+
 	
 	<!-- String rules activity -->
 	<string name="activity_rules_list_regles">Règles</string>
@@ -153,11 +156,19 @@
 	<string name="activity_score_button_regles_title">REGLES</string>
 	<string name="activity_score_button_reset_icon"></string>
 	<string name="activity_score_button_reset_title">RESET</string>
+	<string name="activity_score_dialog_explication_text_explications">Vous avez des amis et un jeu de carte pour faire une partie de belote, mais pas de feuille ou de stylo ?\nIci vous pouvez compter vos scores directement</string>
+	<string name="activity_score_dialog_explication_checkbox_afficher">Ne plus afficher</string>
 	
 	<string name="activity_score_ajouter_equipe_prompt">Choisir une equipe</string>
     <string-array name="activity_score_ajouter_equipe_arrays">
         <item>Equipe 1</item>
         <item>Equipe 2</item>
     </string-array>
+    
+    <string name="activity_score_text_equipe1">Equipe 1</string>
+    <string name="activity_score_text_equipe2">Equipe 2</string>
+    <string name="activity_score_partie_equipe1">0</string>
+     <string name="activity_score_partie_equipe2">0</string>
+    
 	
 </resources>

@@ -1,12 +1,12 @@
 package fr.belotime.view.activity;
 
 import fr.belotime.R;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
 public class ScoreOptionActivity extends PreferenceActivity {
+	@SuppressWarnings("deprecation")
 	@Override
 	 protected void onCreate(Bundle savedInstanceState) {
 	  // TODO Auto-generated method stub

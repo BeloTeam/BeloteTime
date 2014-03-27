@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Score équipe 1"
+        android:layout_marginLeft="10dp"
         app:typeface="roboto_thin"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -21,7 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:maxLength="3"
-        android:hint="Saisir score"
         android:inputType="number"></EditText>
 
 
@@ -29,7 +28,7 @@
         android:id="@+id/activity_score_text_score_equipe2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score équipe 2"
+        android:layout_marginLeft="10dp"
         app:typeface="roboto_thin"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -38,7 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="3"
-        android:hint="Saisir score"
         android:layout_marginBottom="15dp"
         android:inputType="number" >
 
@@ -50,6 +48,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         style="?android:attr/buttonBarButtonStyle"
-        android:text="Valider" />
+        android:text="@android:string/ok" />
 
 </LinearLayout>

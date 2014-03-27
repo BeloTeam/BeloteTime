@@ -2,5 +2,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="score"
     android:title="score" >
-    <EditTextPreference android:key="nbManches"  android:defaultValue="0"/>   	
+    <EditTextPreference android:key="nbManches"  android:defaultValue="0"/>
+    <CheckBoxPreference android:key="explications" android:defaultValue="true"/>
 </PreferenceScreen>

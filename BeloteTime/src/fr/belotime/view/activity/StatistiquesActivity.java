@@ -1,27 +1,16 @@
 package fr.belotime.view.activity;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.util.Pair;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import fr.belotime.R;
 
 public class StatistiquesActivity extends Activity implements OnClickListener {
@@ -39,8 +28,8 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 	private TextView etoile_stat_nb_capots;
 	private TextView etoile_stat_nb_belotes;
 	private TextView etoile_stat_nb_dedans;
-	private TextView stat_title;
-	private ArrayList<Pair<String, Integer>> statsList;
+
+	
 	private SharedPreferences prefs;
 
 	@Override
@@ -91,7 +80,6 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 			nb = 0;
 		}
 
-		// TODO Auto-generated method stub
 		switch (nb) {
 		case 0:
 			etoileView.setText(R.string.activity_statistique_icon_0_etoile);
@@ -118,7 +106,6 @@ public class StatistiquesActivity extends Activity implements OnClickListener {
 	}
 
 	private void initAttributs() {
-		stat_title = (TextView) findViewById(R.id.title_stat);
 		stat_nb_parties_jouees = (TextView) findViewById(R.id.stat_nb_parties_jouees);
 		stat_pourcentage_parties_gagnees = (TextView) findViewById(R.id.stat_pourcentage_parties_gagnees);
 		stat_temps_heure = (TextView) findViewById(R.id.stat_temps_heure);

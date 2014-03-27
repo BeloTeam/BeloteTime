@@ -25,7 +25,7 @@
 
         <ImageView
             android:id="@+id/activity_home_img_logo"
-            android:layout_width="420dip"
+            android:layout_width="0dip"
             android:layout_height="193dp"
             android:layout_marginLeft="20dip"
             android:layout_marginRight="15dip"

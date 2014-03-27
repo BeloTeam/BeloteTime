@@ -5,7 +5,9 @@ import java.util.List;
 import fr.belotime.R;
 import fr.belotime.view.utils.IconFontTextView;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -13,23 +15,20 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.util.Pair;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class ScoreActivity extends Activity implements OnClickListener {
+	private static final int DIALOG_CONFIRM_RESET = 0;
+	private static final int DIALOG_EXPLICATIONS = 1;
 	private SharedPreferences prefs;
 	private List<Integer> listeScoreMancheEquipe1;
 	private List<Integer> listeScoreMancheEquipe2;
@@ -38,35 +37,46 @@ public class ScoreActivity extends Activity implements OnClickListener {
 	private Integer nbManches;
 	private Dialog dialog;
 	private TableLayout tableLayout;
+	private TextView titre_eq1;
+	private TextView titre_eq2;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_score);
-		//init attributs
+		this.setContentView(R.layout.layout_score);
+		this.initAttributs();
+		this.calculScorePartie();
+		this.refreshLayoutNomEquipe();
+		// init nom dequipes + score a faire aussi dans le onpause
+		this.calculerScore();
+		this.empecherVeille();
+		this.afficherExplications();
+	}
+
+	private void initAttributs() {
 		this.findViewById(R.id.activity_score_button_ajouter).setOnClickListener(this);
 		this.findViewById(R.id.activity_score_button_options).setOnClickListener(this);
 		this.findViewById(R.id.activity_score_button_regles).setOnClickListener(this);
 		this.findViewById(R.id.activity_score_button_reset).setOnClickListener(this);
-
+		this.titre_eq1 = (TextView)this.findViewById(R.id.activity_score_text_equipe1);
+		this.titre_eq2 = (TextView)this.findViewById(R.id.activity_score_text_equipe2);
+		this.titre_eq1.setOnClickListener(this);
+		this.titre_eq2.setOnClickListener(this);
+		this.listeScoreMancheEquipe1 = new ArrayList<Integer>();
+		this.listeScoreMancheEquipe2 = new ArrayList<Integer>();
+		
 		PreferenceManager.setDefaultValues(this, R.xml.score, true);
 		this.prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
 		// recuperer les stats grace au preferences
 		this.nbManches = Integer.parseInt(this.prefs.getString("nbManches", "0"));
-		this.listeScoreMancheEquipe1 = new ArrayList<Integer>();
-		this.listeScoreMancheEquipe2 = new ArrayList<Integer>();	
-		
-		calculScorePartie();
-		
-		this.initNomEquipe();
-		// init nom dequipes + score a faire aussi dans le onpause
-		initScore();
-		// si on a empecher la veille
-		initVeille();
-
 	}
 
+	@SuppressWarnings("deprecation")
+	private void afficherExplications() {
+		if(this.prefs.getBoolean("explications", true)){
+			showDialog(DIALOG_EXPLICATIONS);
+		}
+	}
 
 	private void calculScorePartie() {
 		this.scorePartieEquipe1 = 0;
@@ -81,7 +91,7 @@ public class ScoreActivity extends Activity implements OnClickListener {
 	}
 
 
-	private void initVeille() {
+	private void empecherVeille() {
 		if(this.prefs.getBoolean("veille",true)){
 			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		}
@@ -90,18 +100,20 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	private void initNomEquipe(){
+	private void refreshLayoutNomEquipe(){
 		//initialisation des nom dequipe
-		((TextView)this.findViewById(R.id.activity_score_text_equipe1)).setText(this.prefs.getString("nomEquipe1", "Nous"));
-		((TextView)this.findViewById(R.id.activity_score_text_equipe2)).setText(this.prefs.getString("nomEquipe2", "Eux"));
+		this.titre_eq1.setText(this.prefs.getString("nomEquipe1", "Nous"));
+		this.titre_eq2.setText(this.prefs.getString("nomEquipe2", "Eux"));
 	}
 	
-	private void initScoreTotaux(){
-		((TextView)this.findViewById(R.id.activity_score_partie_equipe1)).setText(this.scorePartieEquipe1.toString());
-		((TextView)this.findViewById(R.id.activity_score_partie_equipe2)).setText(this.scorePartieEquipe2.toString());
+	private void refreshLayoutScoreTotaux() {
+		((TextView) this.findViewById(R.id.activity_score_partie_equipe1))
+				.setText(this.scorePartieEquipe1.toString());
+		((TextView) this.findViewById(R.id.activity_score_partie_equipe2))
+				.setText(this.scorePartieEquipe2.toString());
 	}
 	
-	private void initScore() {
+	private void calculerScore() {
 		
 		loadScore();
 		((TableLayout)this.findViewById(R.id.activity_score_table_layout)).removeAllViews();
@@ -109,7 +121,7 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		
 		if(!this.prefs.getBoolean("cumule", false)){
 			for (int i = 0; i < this.nbManches; i++) {
-				ajouterTableRow(this.listeScoreMancheEquipe1.get(i),
+				ajouterDansTableRow(this.listeScoreMancheEquipe1.get(i),
 						this.listeScoreMancheEquipe2.get(i));
 			}
 		}
@@ -124,18 +136,18 @@ public class ScoreActivity extends Activity implements OnClickListener {
 				}
 				else{
 					eq1Cumule.add(this.listeScoreMancheEquipe1.get(i)+eq1Cumule.get(i-1));
-					eq2Cumule.add(this.listeScoreMancheEquipe2.get(i)+eq1Cumule.get(i-1));
+					eq2Cumule.add(this.listeScoreMancheEquipe2.get(i)+eq2Cumule.get(i-1));
 				}
-				ajouterTableRow(eq1Cumule.get(i),eq2Cumule.get(i));
+				ajouterDansTableRow(eq1Cumule.get(i),eq2Cumule.get(i));
 			}
 		}
 			
 		this.calculScorePartie();
-		this.initScoreTotaux();
+		this.refreshLayoutScoreTotaux();
 	}
 
-	private void ajouterTableRow(Integer mancheEq1, Integer mancheEq2) {
-		/*AJOUT DANS LE TABLEAU*/
+	@SuppressWarnings("deprecation")
+	private void ajouterDansTableRow(Integer mancheEq1, Integer mancheEq2) {
 		this.tableLayout = (TableLayout) findViewById(R.id.activity_score_table_layout);
 		
 		TableRow tr = new TableRow(this);
@@ -162,8 +174,6 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		tr.addView(txtView);
 		tr.addView(txtView2);
 		this.tableLayout.addView(tr, new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
-		/*FIN AJOUT DANS LE TABLEAU*/
-		
 	}
 
 
@@ -189,16 +199,23 @@ public class ScoreActivity extends Activity implements OnClickListener {
 	protected void onResume() {
 		super.onResume();
 		overridePendingTransition(R.anim.push_down, R.anim.push_up);
-		this.initVeille();
-		this.initNomEquipe();
-		this.initScore();
+		this.empecherVeille();
+		this.refreshLayoutNomEquipe();
+		this.calculerScore();
 	}
 
-
-
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		overridePendingTransition(R.anim.push_down, R.anim.push_up);
+	}
+	
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onClick(View v) {
 		Intent intent;
+		
 		switch (v.getId()) {
 		case R.id.activity_score_button_ajouter:
 			ajouterScoreDialog();
@@ -212,7 +229,8 @@ public class ScoreActivity extends Activity implements OnClickListener {
 			startActivity(intent);
 			break;
 		case R.id.activity_score_button_reset:
-			clearScore();
+			if(this.listeScoreMancheEquipe1.size() > 0)
+				showDialog(DIALOG_CONFIRM_RESET);
 			break;
 		case R.id.activity_score_button_valider:
 			String scoreEquipe1 = ((EditText)this.dialog.findViewById(R.id.activity_score_editText_score_equipe1))
@@ -225,11 +243,24 @@ public class ScoreActivity extends Activity implements OnClickListener {
 				int score1 = Integer.parseInt(scoreEquipe1);
 				int score2 = Integer.parseInt(scoreEquipe2);
 				ajouterScoreSaisie(score1,score2);
+				this.dialog.hide();
 			}
 			else{
-				Toast.makeText(this, "Erreur de saisie",Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "Veuillez saisir les 2 scores",Toast.LENGTH_LONG).show();
 			}
+			
+			break;
+		case R.id.activity_score_dialog_explication_button_ok:
+			boolean explicationsAffichage = 
+			((CheckBox)this.dialog.findViewById(R.id.activity_score_dialog_explication_checkbox_afficher)).isChecked();
+			this.prefs.edit().putBoolean("explications",!explicationsAffichage ).commit();
 			this.dialog.hide();
+			break;
+		case R.id.activity_score_text_equipe1:
+			ajouterScoreDialog();
+			break;
+		case R.id.activity_score_text_equipe2:
+			ajouterScoreDialog();
 			break;
 		default:
 			//lever une exception
@@ -237,6 +268,39 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		}
 	}
 
+	
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		AlertDialog.Builder builder;
+		switch (id) {
+		case DIALOG_CONFIRM_RESET:
+			builder = new AlertDialog.Builder(this);
+			builder.setMessage(
+					"Voulez-vous vraiment rétinitialiser les scores ?")
+					.setCancelable(true)
+					.setPositiveButton("Oui",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									// reinit les stat
+									clearScore();
+								}
+							}).setNegativeButton("Non", null);
+			builder.setTitle("REINITIALISATION SCORES");
+			dialog = builder.create();
+			break;
+		case DIALOG_EXPLICATIONS:
+			this.dialog = new Dialog(this);
+			this.dialog.setContentView(R.layout.layout_explications_score);
+			this.dialog.setTitle("FEUILLE DE SCORE");
+			this.dialog.findViewById(R.id.activity_score_dialog_explication_button_ok).setOnClickListener(this);
+			break;
+		default:
+			dialog = null;
+		}
+		return dialog;
+
+	}
 
 
 	private void ajouterScoreSaisie(Integer scoreEquipe1, Integer scoreEquipe2) {
@@ -252,10 +316,10 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		editor.commit();
 		Log.d("scores", "AJOUT : \n"+this.prefs.getAll().toString());
 		
-		this.initScore();
+		this.calculerScore();
 		//this.ajouterTableRow(scoreEquipe1, scoreEquipe2);
 
-		this.initScoreTotaux();
+		this.refreshLayoutScoreTotaux();
 	}
 
 
@@ -263,7 +327,7 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		//appel de la dialog
 		// custom dialog
 		this.dialog = new Dialog(this);
-		this.dialog.setContentView(R.layout.addscoredialog);
+		this.dialog.setContentView(R.layout.layout_addscoredialog);
 		this.dialog.setTitle("AJOUTER UN SCORE");
 		this.dialog.findViewById(R.id.activity_score_button_valider).setOnClickListener(this);
 		String nomEquipe1="Score équipe "+this.prefs.getString("nomEquipe1", "Nous");
@@ -299,6 +363,6 @@ public class ScoreActivity extends Activity implements OnClickListener {
 		Log.d("scores","Reset : \n"+this.prefs.getAll().toString());
 		((TableLayout)this.findViewById(R.id.activity_score_table_layout)).removeAllViews();
 		
-		this.initScoreTotaux();
+		this.refreshLayoutScoreTotaux();
 	}
 }

@@ -1,21 +1,14 @@
 package fr.belotime.view.activity;
 
 import fr.belotime.R;
-import fr.belotime.view.utils.MakeFont;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.view.View.OnClickListener;
 
-public class AboutActivity extends Activity implements OnTouchListener {
-
-	private TextView activity_about_icon_about;
+public class AboutActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,24 +16,11 @@ public class AboutActivity extends Activity implements OnTouchListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_about);
 
-		initAttributs();
-		initFont();
 		findViewById(R.id.activity_about_text_contact_github)
-				.setOnTouchListener(this);
-		findViewById(R.id.activity_about_text_contact_mail).setOnTouchListener(
+				.setOnClickListener(this);
+		findViewById(R.id.activity_about_text_contact_mail).setOnClickListener(
 				this);
 
-	}
-
-	private void initFont() {
-		Typeface elegant_font = Typeface.createFromAsset(getAssets(),
-				"fonts/ElegantIcons.ttf");
-		// MakeFont.makeFont(activity_about_icon_about,elegant_font);
-		// MakeFont.makeFont((TextView)findViewById(R.id.activity_about_icon_contact_mail),elegant_font);
-	}
-
-	private void initAttributs() {
-		activity_about_icon_about = (TextView) findViewById(R.id.activity_about_icon_about);
 	}
 
 	@Override
@@ -50,8 +30,9 @@ public class AboutActivity extends Activity implements OnTouchListener {
 		overridePendingTransition(R.anim.push_down, R.anim.push_up);
 	}
 
+
 	@Override
-	public boolean onTouch(View v, MotionEvent arg1) {
+	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.activity_about_text_contact_github:
 			Intent browserIntent = new Intent(Intent.ACTION_VIEW,
@@ -72,7 +53,6 @@ public class AboutActivity extends Activity implements OnTouchListener {
 			// lever exception ici
 			break;
 		}
-		return false;
 	}
 
 }

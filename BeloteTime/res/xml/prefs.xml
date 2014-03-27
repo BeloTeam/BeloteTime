@@ -1,66 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:key="first_preferencescreen">
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="OPTIONS"
+    android:key="general_preferencescreen" >
 
-    <PreferenceCategory android:title="Options de jeu" android:key="optionJeu">
-        <ListPreference 
-            android:title="Type de carte" 
-            android:key="typeCarte" 
-            android:defaultValue="0"
-            android:entryValues="@array/activity_options_entry_values_typeCarte" 
+    <PreferenceCategory
+        android:key="optionJeu"
+        android:title="Options de jeu" >
+        <ListPreference
+            android:defaultValue="Manche"
             android:dialogIcon="@android:drawable/ic_menu_sort_by_size"
-            android:entries="@array/activity_options_entries_typeCarte"/>
+            android:entries="@array/activity_options_entries_score"
+            android:entryValues="@array/activity_options_entries_score"
+            android:key="affScore"
+            android:title="Affichage du score" />
         
         <ListPreference
-            android:title="Affichage du score"
-            android:key="affScore"
-            android:defaultValue="Manche"
-            android:entryValues="@array/activity_options_entries_score" 
+            android:defaultValue="0"
             android:dialogIcon="@android:drawable/ic_menu_sort_by_size"
-            android:entries="@array/activity_options_entries_score"/>
-        
-		<fr.belotime.view.utils.SeekBarPreference
-		 	android:title="Vitesse de jeu"
-	    	android:dialogMessage="Changer la vitesse de jeu"
-		    android:defaultValue="5"
-		    android:max="10"
-		  	android:key="seekBar"
-		   />
-        
-        <SwitchPreference 
-            android:title="Son" 
-            android:key="son"
-            android:defaultValue="false"/>
-        
-    </PreferenceCategory>
-    
-    
-    <PreferenceCategory android:title="Options d'équipe" android:key="optionEquipe">
-        
-        <EditTextPreference 
-            android:key="nomEquipe"
-            android:title="Nom de l'équipe"
-            android:defaultValue="equipe1"
-            android:dialogTitle="Saisir le nom de votre équipe"
-            android:dialogIcon="@android:drawable/ic_menu_edit"
-            />
-        <EditTextPreference 
-            android:key="nomJoueur"
-            android:title="Nom du joueur"
-            android:defaultValue="joueur1"
-            android:dialogTitle="Saisir votre nom"
-            android:dialogIcon="@android:drawable/ic_menu_edit"
-            />
-        <EditTextPreference 
-            android:key="nomCoequipier"
-            android:title="Nom du coequipier"
-            android:defaultValue="joueur2"
-            android:dialogTitle="Saisir le nom de du coéquipier"
-            android:dialogIcon="@android:drawable/ic_menu_edit"
-            />
-        
-    </PreferenceCategory>
+            android:entries="@array/activity_options_entries_niveau_ia"
+            android:entryValues="@array/activity_options_entry_values_niveau_ia"
+            android:key="affScore"
+            android:title="Niveau de jeu (IA)" />
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="son"
+            android:title="Son" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="optionEquipe"
+        android:title="Options d&apos;équipe" >
+        
+            <EditTextPreference
+                android:defaultValue="BeloTeam"
+                android:dialogIcon="@android:drawable/ic_menu_edit"
+                android:dialogTitle="Saisir le nom de votre équipe"
+                android:key="nomEquipe"
+                android:title="Nom de votre équipe" />
+            <EditTextPreference
+                android:defaultValue="Nathan"
+                android:dialogIcon="@android:drawable/ic_menu_edit"
+                android:dialogTitle="Saisir votre nom"
+                android:key="nomJoueur"
+                android:title="Votre nom de joueur" />
+            <EditTextPreference
+                android:defaultValue="Arthur"
+                android:dialogIcon="@android:drawable/ic_menu_edit"
+                android:dialogTitle="Saisir le nom de du coéquipier"
+                android:key="nomCoequipier"
+                android:title="Nom de votre coequipier" />
+
+
+        <EditTextPreference
+            android:defaultValue="MechanTeam"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
+            android:dialogTitle="Saisir le nom de l&apos;équipe adverse"
+            android:key="nomEquipeAdverse"
+            android:title="Nom de l&apos;équipe adverse" />
+        <EditTextPreference
+            android:defaultValue="Loïc"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
+            android:dialogTitle="Saisir le nom du premier joueur adverse"
+            android:key="nomJoueur1Adverse"
+            android:title="Nom du premier joueur adverse" />
+        <EditTextPreference
+            android:defaultValue="David"
+            android:dialogIcon="@android:drawable/ic_menu_edit"
+            android:dialogTitle="Saisir le nom du deuxième joueur adverse"
+            android:key="nomJoueur2Adverse"
+            android:title="Nom du deuxième joueur adverse" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

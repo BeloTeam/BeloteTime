@@ -33,14 +33,6 @@
             app:typeface="roboto_thin" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewScoreTest"
-        android:layout_width="323dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        android:visibility="gone"
-        android:text="TextView" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -51,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:gravity="center_horizontal"
-            android:text="Equipe 1"
+            android:text="@string/activity_score_text_equipe1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#1f8dd6"
             app:typeface="roboto_thin" />
@@ -62,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:gravity="center_horizontal"
-            android:text="Equipe 2"
+            android:text="@string/activity_score_text_equipe2"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#1f8dd6"
             app:typeface="roboto_thin" />
@@ -87,7 +79,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1.29"
         android:orientation="horizontal" >
 
@@ -99,7 +91,7 @@
             android:gravity="center_horizontal"
             android:textColor="#1f8dd6"
             app:typeface="roboto_thin"
-            android:text="0"
+            android:text="@string/activity_score_partie_equipe1"
             android:textSize="36sp" />
 
         <fr.belotime.view.utils.IconFontTextView
@@ -110,7 +102,7 @@
             android:gravity="center_horizontal"
             android:textColor="#1f8dd6"
             app:typeface="roboto_thin"
-            android:text="0"
+            android:text="@string/activity_score_partie_equipe2"
             android:textSize="36sp" />
         
     </LinearLayout>
@@ -134,6 +126,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:layout_marginBottom="8dp" >
 
             <LinearLayout

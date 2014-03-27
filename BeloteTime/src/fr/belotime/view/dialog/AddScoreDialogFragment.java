@@ -1,6 +1,5 @@
 package fr.belotime.view.dialog;
 
-import fr.belotime.R;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
