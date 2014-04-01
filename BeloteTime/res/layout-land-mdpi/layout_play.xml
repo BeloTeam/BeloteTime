@@ -1,83 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/GridLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/tapis3"
-    android:orientation="vertical" >
+    android:columnCount="3"
+    android:orientation="horizontal"
+    android:rowCount="3" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="top|left"
+        android:layout_row="0" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView  
+                android:text="Equipe 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Equipe 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_equipe1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_equipe2" />
+        </TableRow> 
+    </TableLayout>
+
+    <!-- joueur nord -->
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_column="1"
+        android:layout_gravity="center|top"
+        android:layout_row="0"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.40"
+            android:src="@drawable/perso3" />    
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nom_joueur_nord" />
+    </LinearLayout>
+
+    <!-- recap dernier pli -->
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="2"
+        android:layout_gravity="top|right"
+        android:layout_row="0" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView  
+                android:text="voir "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="dernier pli "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_equipe1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_equipe2" />
+        </TableRow>
+    </TableLayout>
+
+    <!--  joueur ouest  -->
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_column="0"
+        android:layout_gravity="left|center"
+        android:layout_row="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:src="@drawable/perso3" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nom_joueur_ouest" />
+    </LinearLayout>
+
+    <!--  joueur est  -->
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_column="2"
+        android:layout_gravity="right|center"
+        android:layout_row="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:src="@drawable/perso3" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nom_joueur_est" />
+    </LinearLayout>
+    
+    <!-- joueur sud cartes -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_row="2"
+        android:orientation="horizontal">
+        
 
         <ImageView
             android:id="@+id/as_coeur"
-            
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
             android:layout_marginRight="-10dp"
+            android:layout_marginLeft="-10dp"
             android:src="@drawable/as_coeur" />
 
         <ImageView
             android:id="@+id/neuf_carreau"
             android:layout_width="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
             android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/neuf_carreau" />
+
         <ImageView
             android:id="@+id/roi_coeur"
             android:layout_width="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
             android:layout_height="50dp"
             android:layout_marginRight="-10dp"
             android:src="@drawable/roi_coeur" />
+
         <ImageView
             android:id="@+id/dame_trefle"
             android:layout_width="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
             android:layout_height="50dp"
+            android:layout_gravity="bottom"
             android:layout_marginRight="-10dp"
             android:src="@drawable/dame_trefle" />
+
         <ImageView
             android:id="@+id/as_coeur2"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom|center"
             android:layout_marginRight="-10dp"
             android:src="@drawable/as_coeur" />
+
         <ImageView
             android:id="@+id/neuf_carreau2"
             android:layout_width="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
             android:layout_height="50dp"
+            android:layout_gravity="bottom"
             android:layout_marginRight="-10dp"
             android:src="@drawable/neuf_carreau" />
+
         <ImageView
             android:id="@+id/roi_coeur2"
             android:layout_width="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
             android:layout_height="50dp"
+            android:layout_gravity="bottom"
             android:layout_marginRight="-10dp"
             android:src="@drawable/roi_coeur" />
+
         <ImageView
             android:id="@+id/dame_trefle2"
             android:layout_width="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
             android:layout_height="50dp"
+            android:layout_gravity="bottom"
             android:layout_marginRight="-10dp"
             android:src="@drawable/dame_trefle" />
-
     </LinearLayout>
-
-</LinearLayout>
+</GridLayout>

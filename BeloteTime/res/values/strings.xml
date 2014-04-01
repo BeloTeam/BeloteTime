@@ -169,6 +169,13 @@
     <string name="activity_score_text_equipe2">Equipe 2</string>
     <string name="activity_score_partie_equipe1">0</string>
      <string name="activity_score_partie_equipe2">0</string>
+     <string name="score_equipe1">63</string>
+     <string name="score_equipe2">29</string>
+     <string name="nom_ia1">Bob</string>
+     <string name="nom_joueur_ouest">Bob</string>
+     <string name="nom_joueur_est">Carl</string>
+     <string name="nom_joueur_nord">Lucie</string>
+     <string name="nom_joueur_sud">Moi</string>
     
 	
 </resources>

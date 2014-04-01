@@ -26,7 +26,6 @@ public class PlayActivity extends Activity implements OnClickListener {
 		neuf_carreau.setOnClickListener(this);
 		roi_coeur.setOnClickListener(this);
 		dame_trefle.setOnClickListener(this);
-		
 	}
 
 	@Override
