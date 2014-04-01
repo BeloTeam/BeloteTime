@@ -370,7 +370,7 @@ public final class R {
 <tr><td><code>roboto_thin</code></td><td>0</td><td></td></tr>
 <tr><td><code>elegant</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name android:typeface
+          @attr name fr.belotime:typeface
         */
         public static final int IconFontTextView_typeface = 0;
     };
