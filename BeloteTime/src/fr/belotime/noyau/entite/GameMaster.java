@@ -362,5 +362,9 @@ public class GameMaster {
 			this.joueurCourant = table.joueurSuivant(this.joueurCourant);
 		} while (this.joueurCourant != premierJoueur);
 	}
+	 
+	public Joueur getJoueurDonneur() {
+		return this.joueurDonneur;
+	}
 
 }

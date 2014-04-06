@@ -288,12 +288,12 @@ public class Main {
 
 		//si setCarteAtoutPlusForte est vide alors le joueur n'a pas d'atout plus forte
 		if(setCarteAtoutPlusForte.size() == 0){
-			Terminal.ecrireStringln("Vous ne pouvez pas monter à l'atout.");
+			//Terminal.ecrireStringln("Vous ne pouvez pas monter à l'atout.");
 			return this.get(carteMaitre.getCouleur());
 		}
 		else{
 			//affichage temporaire
-			Terminal.ecrireStringln("Vous devez monter a l'atout");
+			//Terminal.ecrireStringln("Vous devez monter a l'atout");
 			return setCarteAtoutPlusForte;
 		}
 

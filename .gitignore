@@ -219,3 +219,5 @@ pip-log.txt
 #############
 gen/
 project.properties
+bin/
+backup_affichage_tablette/

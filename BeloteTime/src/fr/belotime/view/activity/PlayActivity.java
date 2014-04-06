@@ -1,12 +1,15 @@
 package fr.belotime.view.activity;
 
 import fr.belotime.R;
+import fr.belotime.R.id;
+import fr.belotime.noyau.classesMetier.TableDeJeu;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class PlayActivity extends Activity implements OnClickListener {
 	ImageView asCoeur,neuf_carreau,roi_coeur,dame_trefle; 
@@ -14,6 +17,13 @@ public class PlayActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		/*TableDeJeu t = new TableDeJeu();
+		t.getGm().debuterPartie();
+		t.getGm().getJoueurDonneur().getPosition();
+		
+		TextView donneur = (TextView)findViewById(R.id.DonneurS);
+		donneur.setVisibility(0); // 0 correspond à visible*/
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_play);
 		

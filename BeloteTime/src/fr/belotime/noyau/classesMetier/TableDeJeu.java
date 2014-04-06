@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import fr.belotime.noyau.entite.Equipe;
 import fr.belotime.noyau.entite.GameMaster;
 import fr.belotime.noyau.entite.Joueur;
+import fr.belotime.noyau.entite.JoueurHumain;
 import fr.belotime.noyau.entite.JoueurVirtuel;
 
 /**
@@ -51,7 +52,7 @@ public class TableDeJeu {
 	public TableDeJeu() {
 		sensDesAiguilleDuneMontre = true;
 		joueurs = new Joueur[4];
-		joueurs[0] = new JoueurVirtuel(PositionEnum.Nord,"Arthur",this);
+		joueurs[0] = new JoueurHumain(PositionEnum.Nord,"Arthur",this);
 		joueurs[1] = new JoueurVirtuel(PositionEnum.Sud,"David",this);
 		joueurs[2] = new JoueurVirtuel(PositionEnum.Est,"Loïc",this);
 		joueurs[3] = new JoueurVirtuel(PositionEnum.Ouest,"Nathan",this);
