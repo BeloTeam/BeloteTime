@@ -79,7 +79,7 @@
         
         
         <activity 
-            android:name="fr.belotime.view.activity.GameMaster"
+            android:name="fr.belotime.view.activity.PlayActivity"
             android:screenOrientation="landscape" 
             android:configChanges="orientation" 
             android:parentActivityName="fr.belotime.view.activity.HomeActivity"

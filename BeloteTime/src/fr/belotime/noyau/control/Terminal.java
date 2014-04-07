@@ -10,10 +10,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import javax.swing.event.EventListenerList;
-
-import fr.belotime.noyau.entite.Joueur;
-
 
 public class Terminal {
 
@@ -238,7 +234,6 @@ public class Terminal {
 		ecrireString(ex.toString());
 		ex.printStackTrace(System.err);
 	}
-
 }
 
 
