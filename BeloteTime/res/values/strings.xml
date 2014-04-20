@@ -176,6 +176,8 @@
      <string name="nom_joueur_est">Carl</string>
      <string name="nom_joueur_nord">Lucie</string>
      <string name="nom_joueur_sud">Moi</string>
+     <string name="passer">Passer</string>
+     <string name="prendre">Prendre</string>
     
 	
 </resources>
