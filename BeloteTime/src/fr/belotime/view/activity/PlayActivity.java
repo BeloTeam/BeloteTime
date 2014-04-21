@@ -20,6 +20,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +38,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 	ImageView asCoeur,neuf_carreau,roi_coeur,dame_trefle; 
 	ImageView asCoeur2,neuf_carreau2,roi_coeur2,dame_trefle2,asCoeur3;
 	ImageView carteNord,carteEst,carteSud,carteOuest;
-	GridLayout ecran;
+	RelativeLayout ecran;
 	Etat etat;
 	PositionEnum joueurCourant;
 	Toast toast;
@@ -200,7 +201,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 		carteEst = (ImageView)findViewById(R.id.carteEst);
 		carteOuest = (ImageView)findViewById(R.id.carteOuest);
 		
-		ecran = (GridLayout)findViewById(R.id.GridLayout1);
+		ecran = (RelativeLayout)findViewById(R.id.Plateau);
 		prendre.setOnClickListener(cPrendre);
 		passer.setOnClickListener(cPasser);
 		ecran.setOnClickListener(cChangerJoueur);

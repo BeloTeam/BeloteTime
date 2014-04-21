@@ -77,8 +77,8 @@ public final class R {
     }
     public static final class id {
         public static final int DonneurS=0x7f060042;
-        public static final int GridLayout1=0x7f060035;
         public static final int LinearLayout1=0x7f060067;
+        public static final int Plateau=0x7f060035;
         public static final int activity_about_icon_about=0x7f060002;
         public static final int activity_about_icon_contact_github=0x7f06000a;
         public static final int activity_about_icon_contact_mail=0x7f060008;

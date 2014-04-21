@@ -1,44 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/GridLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/tapis3"
-    android:columnCount="3"
-    android:orientation="horizontal"
-    android:rowCount="3" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Plateau"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tapis3" >
 
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="top|left"
-        android:layout_row="0" >
-
+        android:layout_height="wrap_content" >
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Equipe 1" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Equipe 2" />
         </TableRow>
-
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/score_equipe1" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,18 +39,13 @@
     <LinearLayout
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_column="1"
-        android:layout_gravity="center|top"
-        android:layout_row="0"
+        android:layout_centerHorizontal="true"
         android:orientation="vertical" >
-
         <ImageView
-            android:id="@+id/imageView1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.40"
             android:src="@drawable/perso3" />
-
         <TextView
             android:id="@+id/jNord"
             android:layout_width="fill_parent"
@@ -73,56 +56,16 @@
 
     <!-- recap dernier pli -->
 
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_gravity="top|right"
-        android:layout_row="0" >
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="voir " />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="dernier pli " />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/score_equipe1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/score_equipe2" />
-        </TableRow>
-    </TableLayout>
-
     <!-- joueur ouest -->
 
     <LinearLayout
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_column="0"
-        android:layout_gravity="left|center"
-        android:layout_row="1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
         android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/imageView1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.33"
@@ -139,10 +82,10 @@
     <!-- centre -->
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="vertical" >
-
         <ImageView
             android:id="@+id/as_coeur3"
             android:layout_width="fill_parent"
@@ -152,47 +95,45 @@
             android:gravity="center"
             android:src="@drawable/as_coeur"
             android:visibility="gone"  />
-
         <Button
             android:id="@+id/prendre"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/prendre"
             android:visibility="gone" />
-
         <Button
             android:id="@+id/passer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/passer"
-            android:visibility="gone" />
-
-        <!-- Les cartes du plis en cours -->
-
+            android:visibility="gone" />        
+    </LinearLayout>
+	<!-- Les cartes du plis en cours -->
         <TableLayout
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
             android:orientation="horizontal"
             android:shrinkColumns="*"
             android:stretchColumns="*" >
-
             <TableRow
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal" >
 
                 <ImageView
                     android:id="@+id/carteNord"
-                    android:layout_width="50dp"
+                    android:layout_width="30dp"
                     android:layout_height="50dp"
                     android:src="@drawable/as_coeur"
                     android:visibility="gone" />
+
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="match_parent" >
 
                 <ImageView
                     android:id="@+id/carteOuest"
@@ -207,13 +148,12 @@
                     android:layout_height="50dp"
                     android:src="@drawable/as_coeur"
                     android:visibility="gone" />
-            </TableRow>
 
+            </TableRow>
             <TableRow
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal" >
-
                 <ImageView
                     android:id="@+id/carteSud"
                     android:layout_width="50dp"
@@ -222,8 +162,7 @@
                     android:visibility="gone" />
             </TableRow>
         </TableLayout>
-    </LinearLayout>
-
+    
     <!--
     <LinearLayout
         android:layout_width="300dp"
@@ -247,13 +186,11 @@
     <LinearLayout
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_column="2"
-        android:layout_gravity="right|center"
-        android:layout_row="1"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/imageView1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.33"
@@ -271,10 +208,9 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="center|top"
-        android:layout_row="2"
+        android:layout_height="wrap_content"        
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:orientation="vertical" >
 
         <TextView
@@ -361,11 +297,5 @@
         </LinearLayout>
     </LinearLayout>
 
-    <GridLayout
-        android:layout_height="200dp"
-        android:layout_column="1"
-        android:layout_gravity="left|top"
-        android:layout_row="1" >
-    </GridLayout>
 
-</GridLayout>
+</RelativeLayout>
