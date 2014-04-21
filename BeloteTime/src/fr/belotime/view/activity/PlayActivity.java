@@ -40,6 +40,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 	ImageView asCoeur,neuf_carreau,roi_coeur,dame_trefle; 
 	ImageView asCoeur2,neuf_carreau2,roi_coeur2,dame_trefle2,asCoeur3;
 	ImageView carteNord,carteEst,carteSud,carteOuest;
+	ImageView jetonAtout;
 	RelativeLayout ecran;
 	Etat etat;
 	PositionEnum joueurCourant;
@@ -59,6 +60,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 				prendre.setVisibility(8); // == gone
 				passer.setVisibility(View.GONE);
 				joueurCourant = changerJoueur();//joueur après le donneur normalement
+				jetonAtout.setVisibility(View.VISIBLE);
 				distribuerFinPaquet();
 				debuterPli();
 				afficherJoueurCourant();
@@ -175,6 +177,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 		etat = Etat.E1erTour;
 		joueurCourant = PositionEnum.Ouest;
 		//ImageView donneur = (ImageView)findViewById(R.id.donneur);
+		jetonAtout = (ImageView)findViewById(R.id.jetonCarreau);
 		jSud = (TextView)findViewById(R.id.jSud);
 		jEst = (TextView)findViewById(R.id.jEst);
 		jOuest = (TextView)findViewById(R.id.jOuest);

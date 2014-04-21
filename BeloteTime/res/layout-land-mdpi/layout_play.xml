@@ -3,8 +3,9 @@
     android:id="@+id/Plateau"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tapis3" >
+    android:background="@drawable/tapis" >
 
+    <!--  tableau des scores
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -39,7 +40,7 @@
                 android:text="@string/score_equipe2" />
         </TableRow>
     </TableLayout>
-
+ -->
     <!-- joueur nord -->
 
     <LinearLayout
@@ -91,8 +92,8 @@
 
     <ImageView
         android:id="@+id/donneurOuest"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_below="@+id/ouest"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/ouest"
@@ -239,12 +240,22 @@
 
     <ImageView
         android:id="@+id/donneurSud"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_alignBottom="@+id/jSud"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/jSud"
         android:src="@drawable/token"
+        android:visibility="gone" />
+    
+     <ImageView
+        android:id="@+id/jetonCarreau"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/jSud"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/jSud"
+        android:src="@drawable/carreau"
         android:visibility="gone" />
 
     <LinearLayout
