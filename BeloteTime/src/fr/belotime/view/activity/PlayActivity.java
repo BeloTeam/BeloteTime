@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,7 @@ import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -106,7 +108,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 			case EPliEnCours:	
 					//jouer une carte
 					if(joueurCourant != PositionEnum.Sud){
-						jouerCarte(R.drawable.dame_trefle);
+						jouerCarte(R.drawable.dame_pique);
 						if(nbCartesDansPli<4){
 							joueurCourant = changerJoueur();
 							afficherJoueurCourant();
@@ -168,10 +170,11 @@ public class PlayActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_play);
+		setContentView(R.layout.layout_play);	
+		
 		etat = Etat.E1erTour;
 		joueurCourant = PositionEnum.Ouest;
-		TextView donneur = (TextView)findViewById(R.id.DonneurS);
+		//ImageView donneur = (ImageView)findViewById(R.id.donneur);
 		jSud = (TextView)findViewById(R.id.jSud);
 		jEst = (TextView)findViewById(R.id.jEst);
 		jOuest = (TextView)findViewById(R.id.jOuest);
@@ -181,7 +184,10 @@ public class PlayActivity extends Activity implements OnClickListener {
 		passer = (Button)findViewById(R.id.passer);
 		
 		
-		donneur.setVisibility(0); // 0 correspond à visible
+		//donneur.setVisibility(0); // 0 correspond à visible
+		
+		//android:layout_alignTop="@+id/jSud"
+        //android:layout_toRightOf="@+id/jSud"
 		//toast.setText("Passe");
 
 		asCoeur = (ImageView) findViewById(R.id.as_coeur);
