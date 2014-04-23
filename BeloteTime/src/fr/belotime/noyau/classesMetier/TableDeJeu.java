@@ -20,6 +20,7 @@
 package fr.belotime.noyau.classesMetier;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import fr.belotime.noyau.entite.Equipe;
 import fr.belotime.noyau.entite.GameMaster;
@@ -53,9 +54,9 @@ public class TableDeJeu {
 		sensDesAiguilleDuneMontre = true;
 		joueurs = new Joueur[4];
 		joueurs[0] = new JoueurHumain(PositionEnum.Nord,"Arthur",this);
-		joueurs[1] = new JoueurVirtuel(PositionEnum.Sud,"David",this);
-		joueurs[2] = new JoueurVirtuel(PositionEnum.Est,"Loïc",this);
-		joueurs[3] = new JoueurVirtuel(PositionEnum.Ouest,"Nathan",this);
+		joueurs[1] = new JoueurHumain(PositionEnum.Sud,"David",this);
+		joueurs[2] = new JoueurHumain(PositionEnum.Est,"Loïc",this);
+		joueurs[3] = new JoueurHumain(PositionEnum.Ouest,"Nathan",this);
 		this.equipes = new ArrayList<Equipe>();
 		equipes.add(new Equipe(joueurs[0], joueurs[1],"Nord/Sud"));
 		equipes.add(new Equipe(joueurs[2], joueurs[3],"Est/Ouest")); 
@@ -67,6 +68,13 @@ public class TableDeJeu {
 		rebeloteAnnoncee = false;
 	}
 	
+		
+	@Override
+	public String toString() {
+		return "TableDeJeu est composée de"+ equipes.get(0) + "et de " + equipes.get(1);
+	}
+
+
 	/**
 	 * Retourne l'équipe d'un joueur donné.
 	 * @param joueur

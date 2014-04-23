@@ -86,6 +86,9 @@
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
             ></activity>
         
+        <service android:name="fr.belotime.view.activity.MonService"/>
+        
+        
         <activity 
             android:name="fr.belotime.view.activity.ScoreOptionActivity"
             android:parentActivityName="fr.belotime.view.activity.ScoreActivity"
@@ -93,5 +96,4 @@
             android:screenOrientation="unspecified"
             ></activity>
     </application>
-
 </manifest>

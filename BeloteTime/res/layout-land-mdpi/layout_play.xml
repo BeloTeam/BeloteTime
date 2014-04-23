@@ -100,6 +100,13 @@
         android:src="@drawable/token" />
 
     <!-- centre -->
+		<Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Commencer" />
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -203,6 +210,9 @@
                 android:src="@drawable/as_pique"
                 android:visibility="gone" />
         </TableRow>
+
+        
+
     </TableLayout>
 
     <!-- joueur est -->

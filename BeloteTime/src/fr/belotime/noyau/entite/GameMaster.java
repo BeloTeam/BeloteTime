@@ -77,6 +77,27 @@ public class GameMaster {
 		return false;
 	}
 	
+	public void changerEtat(EtatPartieEnum nouvelEtat){
+		etat = nouvelEtat;
+	}
+	
+	public void premiereDistribution(){
+		Terminal.ecrireStringln("Donneur : " + this.joueurDonneur);
+		this.joueurCourant = table.joueurSuivant(this.joueurDonneur);
+		distribuer(3);
+		distribuer(2);
+		this.table.retournerUneCarte();
+	}
+	
+	public void premierTourChoixAtout(){
+		this.joueurPrend = quiPrendPremiereDonne();
+		if (this.joueurPrend == null) {
+			etat = EtatPartieEnum.DeuxiemeTourDonne;
+		} else {
+			this.table.attribuerCarteRetourneeA(this.joueurPrend);
+			etat = EtatPartieEnum.DeuxiemeDistribution;
+		}
+	}
 
 	/**
 	 * Lancement de la partie.
@@ -86,21 +107,11 @@ public class GameMaster {
 		while (!this.partieFinie()) {
 			switch (etat) {
 			case PremiereDistribution:
-				Terminal.ecrireStringln("Donneur : " + this.joueurDonneur);
-				this.joueurCourant = table.joueurSuivant(this.joueurDonneur);
-				distribuer(3);
-				distribuer(2);
-				this.table.retournerUneCarte();
-				etat = EtatPartieEnum.PremierTourDonne;
+				premiereDistribution();
+				//etat = EtatPartieEnum.PremierTourDonne;
 				break;
 			case PremierTourDonne:
-				this.joueurPrend = quiPrendPremiereDonne();
-				if (this.joueurPrend == null) {
-					etat = EtatPartieEnum.DeuxiemeTourDonne;
-				} else {
-					this.table.attribuerCarteRetourneeA(this.joueurPrend);
-					etat = EtatPartieEnum.DeuxiemeDistribution;
-				}
+				premierTourChoixAtout();				
 				break;
 			case DeuxiemeTourDonne:
 				this.joueurPrend = quiPrendDeuxiemeDonne();

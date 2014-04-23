@@ -6,8 +6,11 @@ import fr.belotime.noyau.classesMetier.PositionEnum;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
@@ -48,10 +51,24 @@ public class PlayActivity extends Activity implements OnClickListener {
 	TextView jSud,jEst,jOuest,jNord;
 	Button prendre,passer;
 	int nbCartesDansPli, nbPlisDansManche;
+	Button start;
+	String nomDonneur;
+	private BroadcastReceiver reception = new BroadcastReceiver() {
+
+	    @Override
+	    public void onReceive(Context context, Intent intent) {
+	    	String action = intent.getAction();
+	    	if(action.equalsIgnoreCase(MonService.MESSAGE)){ 
+	    		Bundle extra = intent.getExtras();
+	    		String string = extra.getString(MonService.DONNEUR);	       
+	    		Toast.makeText(PlayActivity.this,"Qui distribue ? " + string,Toast.LENGTH_LONG).show();
+	      }
+	    }
+	  };
 	
 	private final static int ID_DIALOG_TOUR1 = 0;
-	private final static int ID_DIALOG_TOUR2 = 1;
-    
+	private final static int ID_DIALOG_TOUR2 = 1;    
+	
 	private OnClickListener cPrendre = new View.OnClickListener() {		
 		@Override
 		public void onClick(View v) {
@@ -169,6 +186,29 @@ public class PlayActivity extends Activity implements OnClickListener {
 		}
 	};
 	
+	private OnClickListener cCommencer = new OnClickListener() {		
+		@Override
+		public void onClick(View v) {
+			Intent i = new Intent(PlayActivity.this, MonService.class);
+	        //i.putExtra(android.content.Intent.Ex, nomDonneur);
+	        startService(i);
+			start.setVisibility(View.GONE);
+		}
+	};
+	
+	  @Override
+	  public void onResume() {
+	    super.onResume();
+	    //registerReceiver(reception,  new IntentFilter(MonService.MESSAGE));
+	  }
+
+	  /** Si vous déclarez votre receiver dans le onResume, n'oubliez pas qu'il faut l'arrêter dans le onPause **/
+	  @Override
+	  public void onPause() {
+	    super.onPause();
+	    //unregisterReceiver(reception);
+	  }
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
@@ -223,6 +263,9 @@ public class PlayActivity extends Activity implements OnClickListener {
 		neuf_carreau2.setOnClickListener(cCarte);
 		roi_coeur2.setOnClickListener(cCarte);
 		dame_trefle2.setOnClickListener(cCarte);
+		
+		start = (Button)findViewById(R.id.button1);
+		start.setOnClickListener(cCommencer);
 		
 		nbCartesDansPli = 0;
 		nbPlisDansManche = 0;
