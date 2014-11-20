@@ -52,10 +52,10 @@ public class TableDeJeu {
 	public TableDeJeu() {
 		sensDesAiguilleDuneMontre = true;
 		joueurs = new Joueur[4];
-		joueurs[0] = new JoueurHumain(PositionEnum.Nord,"Arthur",this);
-		joueurs[1] = new JoueurVirtuel(PositionEnum.Sud,"David",this);
-		joueurs[2] = new JoueurVirtuel(PositionEnum.Est,"Loïc",this);
-		joueurs[3] = new JoueurVirtuel(PositionEnum.Ouest,"Nathan",this);
+		joueurs[0] = new JoueurVirtuel(PositionEnum.Nord,"BNord",this);
+		joueurs[1] = new JoueurHumain(PositionEnum.Sud,"JSud",this);
+		joueurs[2] = new JoueurVirtuel(PositionEnum.Est,"BEst",this);
+		joueurs[3] = new JoueurVirtuel(PositionEnum.Ouest,"BOuest",this);
 		this.equipes = new ArrayList<Equipe>();
 		equipes.add(new Equipe(joueurs[0], joueurs[1],"Nord/Sud"));
 		equipes.add(new Equipe(joueurs[2], joueurs[3],"Est/Ouest")); 

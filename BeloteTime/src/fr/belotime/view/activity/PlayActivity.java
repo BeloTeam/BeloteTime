@@ -25,6 +25,8 @@ import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
+import fr.belotime.noyau.classesMetier.*;
+import fr.belotime.noyau.entite.*;
 
 enum Etat{
 	E1erTour,
@@ -48,6 +50,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 	TextView jSud,jEst,jOuest,jNord;
 	Button prendre,passer;
 	int nbCartesDansPli, nbPlisDansManche;
+	TableDeJeu t;
 	
 	private final static int ID_DIALOG_TOUR1 = 0;
 	private final static int ID_DIALOG_TOUR2 = 1;
@@ -57,7 +60,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 		public void onClick(View v) {
 			switch (etat) {
 			case EAttentePrendre:
-				prendre.setVisibility(8); // == gone
+				prendre.setVisibility(View.GONE);
 				passer.setVisibility(View.GONE);
 				joueurCourant = changerJoueur();//joueur après le donneur normalement
 				jetonAtout.setVisibility(View.VISIBLE);
@@ -76,8 +79,8 @@ public class PlayActivity extends Activity implements OnClickListener {
 		public void onClick(View v) {
 			switch (etat) {
 			case EAttentePrendre:
-				prendre.setVisibility(8);
-				passer.setVisibility(8);
+				prendre.setVisibility(View.GONE);
+				passer.setVisibility(View.GONE);
 				passer();		
 				etat=Etat.E1erTour;
 				break;
@@ -100,8 +103,8 @@ public class PlayActivity extends Activity implements OnClickListener {
 				// après le joueur Est on passe à l'utilisateur
 				else{
 					// joueurCourant == PositionEnum.Est, il faut passer
-					prendre.setVisibility(0);
-					passer.setVisibility(0);
+					prendre.setVisibility(View.VISIBLE);
+					passer.setVisibility(View.VISIBLE);
 					etat=Etat.EAttentePrendre;											
 				}				
 				break;
@@ -176,7 +179,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 		
 		etat = Etat.E1erTour;
 		joueurCourant = PositionEnum.Ouest;
-		//ImageView donneur = (ImageView)findViewById(R.id.donneur);
+		ImageView jetonDonneur = (ImageView)findViewById(R.id.donneur);
 		jetonAtout = (ImageView)findViewById(R.id.jetonCarreau);
 		jSud = (TextView)findViewById(R.id.jSud);
 		jEst = (TextView)findViewById(R.id.jEst);
@@ -187,10 +190,12 @@ public class PlayActivity extends Activity implements OnClickListener {
 		passer = (Button)findViewById(R.id.passer);
 		
 		
-		//donneur.setVisibility(0); // 0 correspond à visible
-		
-		//android:layout_alignTop="@+id/jSud"
-        //android:layout_toRightOf="@+id/jSud"
+		//positionner le jeton
+		RelativeLayout.LayoutParams donneurParams = (RelativeLayout.LayoutParams) jetonDonneur.getLayoutParams();
+		attribuerJeton(donneurParams, R.id.ouest);
+		attribuerJeton(donneurParams, R.id.est);
+		attribuerJeton(donneurParams, R.id.nord);
+
 		//toast.setText("Passe");
 
 		asCoeur = (ImageView) findViewById(R.id.as_coeur);
@@ -228,6 +233,9 @@ public class PlayActivity extends Activity implements OnClickListener {
 		nbPlisDansManche = 0;
 		afficherJoueurCourant();
 		passer();
+
+		t = new TableDeJeu();
+		//t.getGm().debuterPartie();
 	}
 
 
@@ -258,6 +266,19 @@ public class PlayActivity extends Activity implements OnClickListener {
 			jSud.setTextColor(Color.BLACK);
 			jOuest.setTextColor(Color.GREEN);
 			break;
+		}
+	}
+
+	public void attribuerJeton(RelativeLayout.LayoutParams params, int positionId){
+
+		if (positionId == R.id.est){
+			params.addRule(RelativeLayout.RIGHT_OF,0);
+			params.addRule(RelativeLayout.LEFT_OF,positionId);
+			params.addRule(RelativeLayout.ALIGN_TOP,positionId);
+		} else {
+			params.addRule(RelativeLayout.LEFT_OF,0);
+			params.addRule(RelativeLayout.RIGHT_OF,positionId);
+			params.addRule(RelativeLayout.ALIGN_TOP,positionId);
 		}
 	}
 
@@ -293,10 +314,10 @@ public class PlayActivity extends Activity implements OnClickListener {
 	}
 
 	private void distribuerFinPaquet() {
-		neuf_carreau2.setVisibility(0);
-		roi_coeur2.setVisibility(0);
-		dame_trefle2.setVisibility(0);
-		asCoeur3.setVisibility(8); 
+		neuf_carreau2.setVisibility(View.VISIBLE);
+		roi_coeur2.setVisibility(View.VISIBLE);
+		dame_trefle2.setVisibility(View.VISIBLE);
+		asCoeur3.setVisibility(View.GONE);
 	}
 
 
